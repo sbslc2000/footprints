@@ -6,10 +6,13 @@
 # 주제
 
 ## Sorting
+[[Topological Sorting]]
 
 ## Graph Theory
+[[Minimal Spanning Tree]]
 
 ## Dynamic Programming
+[[Dynamic Programming]]
 
 ## Pattern Matching
 [[Pattern Matching]]
