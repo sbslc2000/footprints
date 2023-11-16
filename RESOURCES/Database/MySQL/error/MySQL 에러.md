@@ -1,0 +1,1 @@
+[[MySQL 1206 'The total number of locks exceeds the lock table size']]

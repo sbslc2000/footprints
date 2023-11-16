@@ -1,0 +1,1 @@
+YAML이란 YAML Ain't Markup Language의 약자로, 구성 파일 혹은 데이터 전송 응용 프로그램에서 사용되는 데이터 포맷입니다. XML이나 JSON 포맷보다 사람이 읽기 쉬운 포맷입니다.
