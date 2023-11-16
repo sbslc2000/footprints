@@ -1,3 +1,4 @@
+# Elastic Beanstalk
 Elastic Beanstalk(EB)은 Apache, Nginx와 같은 친숙한 웹서버에서 Java, PHP, Node.js, Docker와 함께개발된 웹 응용 프로그램 및 서비스를 배포하고 확장할 수 있게 도와주는 서비스이다.
 
 ![](https://i.imgur.com/0uUWIvh.png)

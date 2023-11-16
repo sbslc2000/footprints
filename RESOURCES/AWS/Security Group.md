@@ -1,6 +1,7 @@
+# Security Group
 > 보안 그룹은 인스턴스에 대한 인바운드 및 아웃바운드 트래픽을 제어하는 가상 방화벽 역할을 합니다.
 
-# Concept 
+## Concept 
 * Network Access Control List 와 함께 방화벽의 역할을 하는 서비스
 * 트래픽 허용 Port 를 설정하는 방식으로 구동됨
 	* 기본적으로 모든 포트는 비활성화
@@ -12,8 +13,7 @@
 	* 설정된 인스턴스는 설정한 모든 SG의 룰을 적용받음
 ![](https://i.imgur.com/nUc82BC.png)
 
-
-## Stateful
+### Stateful
 보안그룹에서 Stateful은 Inbound로 들어온 트래픽이 별 다른 Outbound 설정 없이 나갈 수 있다는 뜻이다.
 ![](https://i.imgur.com/vCBndol.png)
 
@@ -52,7 +52,7 @@ Auto Scaling의 경우 트래픽의 양에 따라 구성하는 가상 서버 대
 ![](https://i.imgur.com/GUpS1qj.png)
 이 경우 RDS는 Seg-EC2 보안그룹에 속해있는 모든 인스턴스에게 포트를 open한다.
 
-# 보안그룹의 한계점
+## 보안그룹의 한계점
 
 * Region ekd 2,500개만 생성할 수 있다.
 * Inbound, Outbound 규칙은 60개로 제한된다.
