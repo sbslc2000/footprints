@@ -81,3 +81,4 @@ class GenericList<T> {
 ![](https://i.imgur.com/MQ2b2xm.png)
 
 ## Type Erasure
+[[Type Erasure]]
