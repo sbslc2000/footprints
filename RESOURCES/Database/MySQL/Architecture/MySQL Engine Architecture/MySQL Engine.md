@@ -1,3 +1,5 @@
+# MySQL Engine
+
 MySQL Engine은 MySQL의 두뇌에 해당하는 부분으로, 클라이언트로부터의 접속 및 쿼리 요청을 처리하는 Connection Handler와, SQL Parser, SQL Preprocessor, Optimizer 등으로 이루어져 있다.
 
 [[MySQL 스레딩 구조]]

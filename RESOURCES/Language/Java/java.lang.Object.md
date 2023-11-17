@@ -1,4 +1,4 @@
-# 개요
+# java.lang.Object
 
 java.lang.Object는 모든 클래스의 조상이며, 어떠한 필드도 없이 메서드들만 갖고 있다. 
 
