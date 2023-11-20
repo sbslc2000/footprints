@@ -59,7 +59,5 @@ static class LevelService {
 
 인터페이스에 @Transactional을 사용하는 것은 스프링 공식 매뉴얼에서 권장하는 방법은 아니다. 가급적 구체 클래스에 @Transactional을 사용하는 것이 좋다.
 
-# header 1
-## header 2
-### header 3
-paragraph
+# 옵션
+[[@Transactional 옵션]]

@@ -28,3 +28,6 @@ logging.level.org.springframework.transaction.interceptor=TRACE
 
 ## 트랜잭션 AOP 주의사항
 [[트랜잭션 AOP 주의사항]]
+
+## 트랜잭션 전파
+[[트랜잭션 전파]]

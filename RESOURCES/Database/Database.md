@@ -7,6 +7,11 @@
 
 # SQL
 
+# NOSQL
+[[Redis]]
+
+
+
 
 ### 참조
 [[Transaction]]

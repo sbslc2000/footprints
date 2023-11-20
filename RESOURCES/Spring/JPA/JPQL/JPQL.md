@@ -101,3 +101,6 @@ List<Member> members2 = query.getResultList();
 [[JPQL 조건식]]
 [[JPQL 경로 표현식]]
 [[JPQL Fetch Join]]
+[[JPQL 기본 함수]]
+[[JPQL 다형성 쿼리]]
+[[JPQL Named Query]]
