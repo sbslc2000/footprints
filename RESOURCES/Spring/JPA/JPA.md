@@ -28,3 +28,6 @@ JPA는 Object와 Relational Model의 패러다임 차이를 중간에서 해소�
 [[Persistence Context]]
 [[EntityManagerFactory]]
 [[JPA Value Type]]
+
+### 함께  보기
+[[JPA 사용 시 로그에 바인딩되는 값 확인하는 방법]]
