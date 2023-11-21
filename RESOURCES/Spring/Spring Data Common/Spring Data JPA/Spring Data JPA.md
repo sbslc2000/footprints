@@ -10,4 +10,8 @@ Spring DATA는 여러 프로젝트의 묶음이다.
 
 스프링 데이터 JPA는 여러 저장소 관련된 기능 중 하나이며 JPA와 관련된 기능들이 추가되어있다.
 
+### 참조 
 [Spring Data](http://projects.spring.io/spring-data/)
+
+### 함께 보기
+[[JpaRepository]]

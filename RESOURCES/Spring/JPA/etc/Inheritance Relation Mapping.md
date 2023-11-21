@@ -1,3 +1,5 @@
+# Inheritance Relation Mapping
+
 관계형 데이터베이스에는 객체에서의 상속 관계는 존재하지 않고, 슈퍼타입 서브타입 관계라는 모델링 기법이 상속과 유사하다.
 ![](https://i.imgur.com/3n50fzZ.png)
 
