@@ -19,3 +19,5 @@
 
 ## Greedy
 
+## NP
+[[The Theory of NP]]
