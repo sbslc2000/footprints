@@ -7,4 +7,6 @@
 [[(Spring Data Common) Custom Repository]]
 [[(Spring Data Common) 도메인 이벤트]]
 [[(Spring Data Common) 웹 관련 기능]]
+[[(Spring Data Common) 쿼리 만들기]]
+
 

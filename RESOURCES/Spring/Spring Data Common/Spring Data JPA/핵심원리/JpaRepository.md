@@ -4,3 +4,161 @@ public interface MemberRepository extends JpaRepository<Member,Long> {
 }
 ```
 JpaRepository는 Spring Data JPA에서 제공하는 인터페이스로, Spring Data Common이 제공하는 PagingAndSortingRepository를 상속한다. 이를 통해 코드 한 줄 없이도 DAO 역할을 하는 빈을 등록할 수 있다.
+
+SpringData JpaRepository를 사용하려면 @EnableJpaRepositories를 사용해야하지만, 스프링부트는 이를 자동 설정해준다. 부트를 사용하지 않을 때는 @Configuration과 함께 사용해야한다.
+
+JpaRepository 를 상속한 인터페이스는 @Repository 애노테이션을 붙일 필요가 없는데, 이는 JpaRepository의 구현체가 되는 SimpleJpaRepository에는 @Repository 애노테이션이 이미 붙어있기 때문이다. 빈 등록의 작동 원리는 [여기](JpaRepository%20빈%20등록)로
+
+## save 메서드
+save는 2가지 용도로 사용할 수 있다.
+1. Transient 상태 객체의 persist
+2. Detached 상태 객체의 merge
+
+Transient 상태인지 Detached 상태인지 판단하는 기준은 @Id 프로퍼티이다. 이 값이 null이면 transient, null이 아닌 경우 detached로 판단한다.
+```java
+@Transactional  
+@Override  
+public <S extends T> S save(S entity) {  
+  
+    Assert.notNull(entity, "Entity must not be null");  
+  
+    if (entityInformation.isNew(entity)) {  
+       entityManager.persist(entity);  
+       return entity;  
+    } else {  
+       return entityManager.merge(entity);  
+    }  
+}
+```
+
+save를 통해 반환되는 엔티티는 무조건 영속화 상태의 객체이다. 반면 파라미터로 전달된 post가 영속된 상태인지는 persist, merge 여부에 따라 달라진다.
+```java
+@Rollback(false)  
+@Test  
+void persistTest() {  
+    Post post = new Post();  
+    post.setTitle("hello");  
+  
+    em.persist(post);  
+  
+    assertThat(em.contains(post)).isTrue();  
+    assertThat(post.getId()).isNotNull();  
+}  
+  
+@Rollback(false)  
+@Test  
+void mergeTest() {  
+    Post post = new Post();  
+    post.setTitle("hello");  
+  
+    Post merge = em.merge(post);  
+  
+    assertThat(em.contains(post)).isFalse();  
+    assertThat(em.contains(merge)).isTrue();  
+    assertThat(merge).isNotNull();  
+    assertThat(merge.getId()).isEqualTo(1L);  
+}
+```
+
+## 쿼리 메서드
+
+### NamedQuery
+엔티티에 메타정보로 제공되는 namedquery를 JpaRepository에 선언하여 사용할 수 있다.
+```java
+@NamedQuery(name = "Post.findByTitle", query = "SELECT p FROM Post AS p WHERE p.title = :title")  
+public class Post extends AbstractAggregateRoot<Post>{
+```
+
+```java
+public interface PostRepository extends JpaRepository<Post,Long> {
+
+	...
+	List<Post> findByTitle(String title);
+}
+```
+
+엔티티에 부가정보를 제공하는 것이 싫다면 Repository 인터페이스에 @Query 애노테이션을 통해 제공할 수 있다.
+
+```java
+public interface PostRepository extends JpaRepository<Post,Long> {
+
+	...
+	@NamedQuery("select p from Post As p where p.title = :title")
+	List<Post> findByTitle(String title);
+}
+```
+
+## Sort
+```java
+@Query("select p from Post as p where p.title = ?1")
+List<Post> findByTitle(String title, Sort sort);
+```
+
+Sort는 엔티티의 프로퍼티 혹은 alias가 없는 경우 예외를 발생시킨다.
+```java
+postRepository.findByTitle("title", Sort.by("LENGTH(title)"));
+```
+
+이것을 우회하는 방법으로는 JpaSort.unsafe()를 사용할 수 있다.
+```java
+postRepository.findByTitle("title", JpaSort.unsafe("LENGTH(title)"));
+```
+
+## Named Parameter와 SPEL
+쿼리 파라미터에 바인딩 하는 방법은 2개가 있다.
+1. 순서를 통해 바인딩
+2. Named Parameter (:title)을 통한 바인딩
+
+### SPEL
+SPEL을 사용하여 특정 엔티티 이름에 종속되지 않은 쿼리를 만들어 재사용성을 늘릴 수 있다. \#entityName에는 해당 레포지토리의 엔티티 이름이 바인딩된다.
+```java
+@Query("select p from #{#entityName} as p WHERE p.title = :title")
+List<Post> findByTitle(String title);
+```
+
+## Update 쿼리
+@Modifying 애노테이션 등을 사용하여 데이터를 조작하는 쿼리를 작성할 수 있다.
+```java
+@Modifying
+@Query("update ...")
+void updateTitle(Post post);
+```
+**추천하지 않는다.** update의 DB 조작 결과는 영속성 캐시에 반영되지 않는다. 이를 해결하기 위해서는 em.flush(), em.clear() 등이 수행되어야 할 것이다. 이러한 속성은 @Modifying 애노테이션의 속성으로 지정해줄 수 있다. 
+
+## EntityGraph
+EntityGraph는 FetchMode를 유연하게 설정할 수 있는 기능을 제공한다.
+
+* **@NamedEntityGraph**
+	* @Entity에서 재사용할 여러 엔티티 그룹을 정의할 때 사용
+* **@EntityGraph**
+	* @NamedEntityGraph에 정의되어있는 엔티티 그룹을 사용
+	* 그래프 타입 설정 가능
+		* (기본값) FETCH: 설정한 엔티티 프로퍼티는 EAGER 적용, 나머지는 LAZY
+		* LOAD : 설정한 엔티티 프로퍼티는 EAGER 적용, 나머지는 기본 페치 전략 따름
+
+```java
+@NamedEntityGraph(name = "Comment.post",
+	attributeNodes = @NamedAttributeNode("post"))
+@Entity
+class Comment {
+...
+}
+```
+
+```java
+public interface CommentRepository extends JpaRepository<Comment,Long> {
+
+	@EntityGraph(value = "Comment.post") //"post는 EAGER 나머지는 LAZY"
+	Optional<Comment> getById(Long id);
+}
+```
+메서드마다 각각의 페칭 전략을 가질 수 있는 기능을 지원한다.
+
+아래처럼 NamedEntityGraph를 엔티티 레벨에 생성하지 않고 쿼리 메서드에 정의할 수 있다. 재사용은 불가능하다.
+```java
+@EntityGraph(attributePaths = "post")
+Optional<Comment> getById(Long id);
+```
+
+#todo <!--Spring 애노테이션의 @Repository로 이전 -->
+스프링은 @Repository가 붙은 오브젝트에서 발생한 예외(SQLException, JPA관련 예외)를DataAccessException으로 변환해준다. 과거의 SQLException은 너무 많은 예외들의 내용을 하나의 Exception클래스에 담고 메시지를 통해 설명이 이루어졌기 때문에, 스프링은 예외를 분석하여 구체적인 예외를 되던져 준다. 하지만 최근에 Hibernate등의 기술들은 충분히 설명되어있는 exception을 반환하기도 한다.
