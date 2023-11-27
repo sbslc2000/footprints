@@ -162,3 +162,4 @@ Optional<Comment> getById(Long id);
 
 #todo <!--Spring 애노테이션의 @Repository로 이전 -->
 스프링은 @Repository가 붙은 오브젝트에서 발생한 예외(SQLException, JPA관련 예외)를DataAccessException으로 변환해준다. 과거의 SQLException은 너무 많은 예외들의 내용을 하나의 Exception클래스에 담고 메시지를 통해 설명이 이루어졌기 때문에, 스프링은 예외를 분석하여 구체적인 예외를 되던져 준다. 하지만 최근에 Hibernate등의 기술들은 충분히 설명되어있는 exception을 반환하기도 한다.
+
