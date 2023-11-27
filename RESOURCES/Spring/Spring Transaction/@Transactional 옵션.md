@@ -34,8 +34,10 @@ public @interface Transactional {
 noRollbackFor은 rollbackFor의 반대 역할을 한다.
 
 ### propagation
+[[트랜잭션 전파]]
+
 ### isolation
-트랜잭션 격리 수준을 지정할 수 있다. 기본 값은 DEFAULT로 데이터베이스에서 설정한 기준을 따른다.
+[트랜잭션 격리 수준](ACID##Isolation%20Level)을 지정할 수 있다. 기본 값은 DEFAULT로 데이터베이스에서 설정한 기준을 따른다. 
 ### timeout
 트랜잭션 수행 시간에 대한 타임아웃을 초 단위로 지정한다. 기본 값으로는 트랜잭션 시스템의 타임아웃을 사용한다. 운영 환경에 따라 동작하지 않는 경우도 있다.
 
