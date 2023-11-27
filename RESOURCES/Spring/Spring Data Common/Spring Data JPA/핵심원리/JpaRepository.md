@@ -163,3 +163,198 @@ Optional<Comment> getById(Long id);
 #todo <!--Spring 애노테이션의 @Repository로 이전 -->
 스프링은 @Repository가 붙은 오브젝트에서 발생한 예외(SQLException, JPA관련 예외)를DataAccessException으로 변환해준다. 과거의 SQLException은 너무 많은 예외들의 내용을 하나의 Exception클래스에 담고 메시지를 통해 설명이 이루어졌기 때문에, 스프링은 예외를 분석하여 구체적인 예외를 되던져 준다. 하지만 최근에 Hibernate등의 기술들은 충분히 설명되어있는 exception을 반환하기도 한다.
 
+## Projection
+일부분에 해당하는 데이터만 select 할 수 있는 기술
+인터페이스 기반과 클래스 기반으로 나눌 수 있으며, 이들은 각각 Open 프로젝션 방식과 Closed 프로젝션 방식이 있다. **Open Projection**은 일단 다 가져온 이후 보고싶은 것만 필터링하는 것이며, **Closed Projection**은 최초에 가져올 때부터 필요한 정보만 가져오는 것이다.
+### 인터페이스 기반 프로젝션
+* closed projection
+아래는 관심있는 필드의 정보만을 가져오는 인터페이스이다.
+```java
+public interface CommentSummary {
+	String getComment();
+	int getUp();
+	int getDown();
+}
+```
+
+```java
+public interface CommentRepository extends JpaRepository<Comment,Long> {
+	...
+	List<CommentSummary> findByPost_id(Long id);
+}
+```
+이 경우 SQL도 필요한 컬럼만을 가져오도록 변경된다.
+
+* open projection
+아래처럼 사용하면 일단 target에 대한 정보를 가져와야하기 때문에 모든 컬럼을 가져오게 된다.
+```java
+public interface CommentSummary {
+	String getComment();
+	int getUp();
+	int getDown();
+
+	@Value("#{target.up ' ' + target.down}")
+	String getVotes();
+}
+```
+
+위와 같이 조합된 컬럼을 사용하면서 closed projection을 하기 위해서는 다음과 같이 하면 된다.
+```java
+public interface CommentSummary {
+	String getComment();
+	int getUp();
+	int getDown();
+
+	String getVotes() {
+		return getUp() + " " + getDown();
+	}
+}
+```
+
+### 클래스 기반 프로젝션
+
+* closed projection
+```java
+public class CommentSummary {
+	private String comment;
+	private int up;
+	private int down;
+
+	public CommentSummary(String comment, int up, int down) {
+		this.comment = comment;
+		this.up = up;
+		this.down = down;
+	}
+	
+	public String getComment();
+	public int getUp();
+	public int getDown();
+
+	String getVotes() {
+		return getUp() + " " + getDown();
+	}
+}
+```
+
+이렇게 하면 클래스를 사용하면서 closed projection을 사용할 수 있다. 하지만 이 방식은 인터페이스에 비하여 많은 코드가 들어가는 반면 효과는 동일하므로 인터페이스를 쓰는 것이 더 나을지도 모르겠다.
+
+### 여러개의 타입을 처리해야한다면
+만약 여러개의 클래스(혹은 인터페이스)를 처리해야할 때 어떻게 하면 좋을까?
+```java
+public interface CommentRepository extends JpaRepository<Comment,Long> {
+	...
+	List<CommentSummary> findByPost_id(Long id);
+	List<CommentOnly> findByPost_id(Long id); //compile error
+}
+```
+
+이때는 Generic을 사용하여 유연하게 처리할 수 있다. -> **Dynamic Projection**
+```java
+public interface CommentRepository extends JpaRepository<Comment,Long> {
+	...
+	//대신 파라미터로 타입을 넘겨야한다.
+	<T> List<T> findByPost_id(Long id, Class<T> type);
+}
+```
+
+## Specification
+Specification은 DDD 책에서 언급되는 개념으로 Querydsl의 Predicate와 유사하다.
+
+### 설정하는 방법
+* jpa-model-generator 추가
+
+어우 구버전
+
+## Query By Example
+QBE는 필드 이름을 작성할 필요 없이 단순한 인터페이스를 통해 동적으로 쿼리를 만드는 기능을 제공하는 사용자 친화적인 쿼리 기술입니다.
+
+```java
+Comment prove = new Comment();
+prove.setBest(true);
+
+//기본적으로는 모든 필드를 비교하여 가져오지만, 여러 메서드를 통해 적용될 프로퍼티를 한정할 수 있다.
+ExampleMatcher.matching()
+	.withIncludeNullValues()
+	.withMatcher("best", isTrue());
+
+```
+
+단점
+* 프로퍼티 그룹에 대한 제약조건을 만들지 못한다.
+* 범위 값 조회를 하지 못한다.
+
+## Auditing
+엔티티의 변화가 나타났을 때, 이것이 언제 누구로부터 변경됐는지 기록하는 방법
+
+```java
+public class Comment {
+
+	@CreatedAt
+	private Date createdAt;
+
+	@CreatedBy
+	@ManyToOne
+	private Account createdBy;
+
+	@LastModifiedDate
+	private Date createdAt;
+
+	@LastModifiedBy
+	@ManyToOne
+	private Account createdBy;
+}
+```
+
+Auditing을 사용하기 위해서는 애노테이션을 작성해주어야 한다.
+
+```java
+@SpringBootApplication
+@EnableJpaAuditing
+public class Application {
+...
+}
+```
+
+Entity에는 AuditingListener를 설정해주어야 한다.
+```java
+@Entity
+@EntityListeners(AuditingEntityListener.class)
+public class Comment { ... }
+```
+
+이제 Date는 알아서 갱신된다. 하지만 Account는 어떻게 업데이트시켜야 할까?
+Spring Security를 사용하면 AuditAware라는 인터페이스를 구현하여 수정,생성 시의 사용자를 반환하게 만들 수 있다.
+```java
+public class AccountAuditAware implements AuditorAware<Account> {
+	@Override
+	public Optional<Account> getCurrentAuditor() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+		return (MyUserDetails) authentication.getPrincipal().getUser();
+	}
+}
+```
+
+이 경우 등록된 빈의 이름을 설정에서 제공해주어야 한다.
+```java
+@SpringBootApplication
+@EnableJpaAuditing(autidotorAwareRef = "accountAuditAware")
+```
+
+
+### Jpa의 Lifecycle Event를 사용하는 방법
+Jpa 엔티티의 lifecycle 간에는 이벤트가 발생하여 콜백 메서드를 수행시킬 수 있다.
+
+```java
+@Entity 
+class Post {
+
+	@PrePersist
+	public void prePersist() {
+		this.createdAt = new Date();
+		this.createdBy = //ThreadLocal을 통해 유저 가져오기
+	}
+}
+```
+
+@PreUpdate, @PrePersist 등을 사용하여 생성시, 수정시 필요한 값들을 넣을 수 있다. 
