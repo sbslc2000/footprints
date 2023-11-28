@@ -56,4 +56,4 @@ public @interface EnableWebSecurity {
 #todo 
 
 ### 함께 보기
-[[UsernamePassword Authentication]]
+[[Authentication]]

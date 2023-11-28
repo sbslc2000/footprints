@@ -88,8 +88,46 @@ http.authorizeHttpRequests((authorize) -> authorize
                 );
 ```
 로그인 성공시 defaultSuccessUrl 로 이동하지 않고 successHandler에서 제공한 리다이렉트 주소로 이동한다. 심지어 successHandler에 redirect 코드를 작성해주지 않아도 defaultSuccessUrl은 사용되지 않는다.
+![](https://i.imgur.com/5mr6Hjl.png)
 
+### loginPage()
+loginPage에 파일명 속성을 제공하여 정적 파일 혹은 템플릿 엔진을 통해 커스텀 로그인 페이지를 띄울 수 있다.
 
+```java
+public SecurityFilterChain filterChain(HttpSecurity http) {
+	http
+		.formLogin(form -> form
+			.loginPage("/login")
+			.permitAll()
+		);
+	// ...
+}
+```
 
+form에는 csrf 토큰이 들어가야 하는데, 이는 Thymeleaf에 의해서 자동으로 설정된다. 정적 파일로 수행했을 때는 이 토큰이 없어서 정상적으로 로그인이 처리되지 않음을 확인했다.
+![](https://i.imgur.com/msw6eU0.png)
+
+로그인 페이지를 타임리프를 통해 띄우고 싶은 경우 별도로 Controller에 사용될 url과 함께 매핑을 해주어야 한다.
+```java
+@GetMapping("/login")  
+    public String login() {  
+    return "login";  
+}
+```
+
+### default 설정
+FormLoginConfigurer을 사용하고 싶지 않은 경우 Customer.withDefaults()를 제공해주어 기본값으로 설정할 수 있다.
+```java
+@Bean  
+public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {  
+    http.formLogin(Customizer.withDefaults());  
+  
+    return http.build();  
+}
+```
+
+### permitAll()
+permitAll()을 통해 failureUrl, loginPage, loginProcessingUrl과 같이 인증되지 않은 유저도 해당 url에 접근할 수 있게 해준다. boolean값을 파라미터로 받아서 허용할지 여부를 결정할 수 있으며 파라미터를 제공하지 않는다면 true가 기본값이다. 이것을 호출해주지 않으면 loginPage에 접근하기 위해 인증 과정을 거쳐야해서 다시 loginPage에 접근하게 되는 순환이 발생한다.
+### 참조
 [Form Login :: Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/form.html)
 
