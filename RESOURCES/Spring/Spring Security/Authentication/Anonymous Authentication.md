@@ -1,11 +1,3 @@
-# 1일1PS
- * 문제 이름 : 녹색 옷 입은 애가 젤다지?
- * 문제 링크 : https://www.acmicpc.net/problem/4485
- * 알고리즘 분류 : Shortest Path
- * 풀이 [1129 · sbslc2000/MyPsChallenge@14e227a · GitHub](https://github.com/sbslc2000/MyPsChallenge/commit/14e227aa3c059654aef8fb1ef6a85edd117bced5)
-
-Dijkstra로 풀었다.
-
 # Anonymous Authenitcation
 일반적으로 'deny-by-default' 전략을 사용하여 따로 접근 가능하게 하는 자원에 대해 명시적으로 지정하고 나머지는 제한하는 것이 좋은 패턴이다. 인증되지 않은 유저에게 접근 권한을 허용해야하는 페이지는 login , logout , homepage 등이 있을 수 있는데, 이들에 대한 접근을 처리하는 방법에는 여러가지가 있다.
 첫번째 방법은 이러한 요청들에 대해 어떠한 보안조치도 수행하지 않는 것이다. 이 요청들에 대해서 filter chain을 skip하는 방식으로 구현될 수 있다. 하지만 이러한 방식은 해당 페이지에서 인증된 유저에 대해서는 특정한 로직을 수행해야하는 경우 바람직하지 않다. (예를 들어 인증된 유저는 로그아웃을 하지 않는 다면 로그인 페이지가 보이지 않아야함)
@@ -114,4 +106,3 @@ public String method(@CurrentSecurityContext SecurityContext context) {
 	return context.getAuthentication().getName();
 }
 ```
-
