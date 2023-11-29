@@ -10,6 +10,8 @@
 
 ## Graph Theory
 [[Minimal Spanning Tree]]
+[[Shortest Path Algorithm]]
+[[Graph Search]]
 
 ## Dynamic Programming
 [[Dynamic Programming]]
