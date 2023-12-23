@@ -129,15 +129,87 @@ ECS가 관리하는 컨테이너에 명령어를 전달하고 싶은 경우 ECS 
 이러한 문제를 해결하기 위하여 사용자가 전달한 명령어는 다음과 같은 방식으로 변경되어 컨테이너에 전달됩니다.
 ```text
 사용자 입력 : {
-  command : 사용자가 입력한 명령어, ex) python main.py
-  path : 사용자 터미널이 현재 가리키고 있는 위치 ex) /src 
+	command : 사용자가 입력한 명령어, ex) python main.py
+	path : 사용자 터미널이 현재 가리키고 있는 위치 ex) /src 
 }
 
 컨테이너 전달 : bash -c '(cd /{volume-path} ; cd .{path} ; {command} ; echo -e {separator} ; pwd)
 ex) bash -c 'cd /app ; cd ./src ; python main.py ; echo -e "===XYZ===" ; pwd'
 ```
 전달되는 명령어가 위와 같이 바뀌는 이유는 다음과 같습니다.
-1. `cd /{volume-path}` : 사용자의 명령을 수행할 위치를 볼륨 하위로 옮기기 위함입니다.
-2. `cd .{path}` : 사용자의 명령을 
+1. `cd /{volume-path}` : 사용자의 명령을 수행할 위치를 볼륨 하위로 옮깁니다.
+2. `cd .{path}` : 사용자의 디렉터리 위치를 받아 해당 위치로 이동합니다.
+3.  `{command}` :  명령어를 수행합니다.
+4. `echo -e {separator}` : 사용자의 명령어와 pwd의 결과를 구분하기 위해 사용됩니다.
+5. `pwd` : 사용자의 명령어 이후 변경된 디렉터리 위치를 가져오기 위해 사용됩니다.
+
+이러한 방식으로 명령어를 전달한다면 사용자와 서버는 다음과 같이 통신할 수 있습니다.
+```
+1. 명령어 수행
+
+client {
+	command : python hello.py
+	path: /
+}
+
+response {
+	content: hello world!
+	path: /   <-- 사용자는 제공된 path를 다음번 요청에 전달
+}
+
+2. cd 
+
+client {
+	command: cd src
+	path: /
+}
+
+response {
+	content: null
+	path: /src  <-- 사용자는 제공된 path를 다음번 요청에 전달
+}
+
+3. mkdir
+
+client {
+	command: mkdir hi
+	path: /src
+}
+
+response {       -- /src/hi 를 생성한 뒤의 응답
+	content: null
+	path: /src
+}
+```
+
+### 출력값 전달
+하지만 도커 컨테이너에 명령어를 전달하는 것으로 요구사항을 만족시키기는 어렵습니다. 명령어의 출력은 연결 세션에서 발생하므로, 이를 애플리케이션 서버에서 확인하여 사용자에게 전달하기에는 추가적인 장치가 필요합니다.
+
+출력 내용을 애플리케이션 서버로 가져오기 위해서 출력 값을 받아올 수 있는 API를 개발했고, 도커 컨테이너에서 curl을 통해 API를 호출하여 결과를 전달할 수 있도록 만들었습니다. 이를 위해서는 추가적인 명령어의 가공이 필요합니다.
+
+```text
+(가공된 명령어) 2>&1 | curl -d @- {API_URL}?secretKey={secretKey}&userId={userId}&projectId={projectId}
+```
+
+* `2>&1` : 사용자 명령어에서 에러 출력이 발생한 경우 이를 표준출력으로 바꾸어 curl의 body로 전달합니다.
+* `secretKey` : 아무나 API를 호출하는 것을 막기 위해서 명령어 생성 시점에 비밀키를 curl 요청의 파라미터에 담습니다. 이 비밀키가 일치하는 경우에만 정상적인 로직으로 간주합니다.
+* `userId, projectId` : 이 명령어의 수행이 어떤 사용자가 어떤 프로젝트에서 수행한 명령어인지 식별하기 위해 사용됩니다. 이 값들을 통해 결과를 전송해야할 웹소켓 세션을 찾습니다.
+
+결과적으로 만들어지는 명령어는 다음과 같습니다.
+
+```text
+요청
+client (projectId = abc, userId = 123) {
+	path: /src
+	command : python hello.py
+}
+```
+
+```bash 
+도커 컨테이너에 전달되는 명령어 : 
+bash -c '(cd /app ; cd ./src ; python hello.py ; echo -e "===XYZ===" ; pwd) 2>&1 | curl -d @- "https://host/api/execute/output?secretKey=qwe!@#&userId=123&projectId=abc"'
+```
+
+수행의 결과는 API 호출을 통해 애플리케이션 서버로 들어오며 이는 다시 정제되어 사용자에게 전달됩니다.
 
 ## 작업 내용 반영 및 동기화
