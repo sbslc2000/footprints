@@ -215,6 +215,35 @@ EFS 저장소는 다음과 같이 구성되어 있습니다.
 ![](https://i.imgur.com/MoPY9hv.png)
 따라서 이를 효과적으로 처리하기 위해서 [디렉터리 감지 모듈](https://github.com/The-Great-Sign/IDE-Project-backend/blob/main/src/main/java/goorm/dbjj/ide/util/filewatcher/FileWatcher.java)을 도입했습니다. Apache Commons IO의 FileAlterationObserver와 FileAlterationMonitor를 통해 EFS 디렉터리의 변경사항을 감지하고 해당 프로젝트의 구독자에게 변경사항을 전달하도록 했습니다. 이를 통해 CRUD API에서 책임을 분리해내고 터미널을 통한 디렉터리 변경 이벤트도 처리하여 사용자에게 전달할 수 있게 되었습니다.
 
+# 데모 영상
+
+로그인 및 프로젝트 생성
+![](https://i.imgur.com/PiEwntJ.gif)
+
+입장
+ㅊ
+
+동시편집
+![](https://i.imgur.com/4VSu0vS.gif)
+
+파일트리
+![](https://i.imgur.com/ZvOswWB.gif)
+
+터미널
+![](https://i.imgur.com/jeUx55A.gif)
+
+챗지피티
+![](https://i.imgur.com/6D1kcfn.gif)
+
+채팅
+![](https://i.imgur.com/Hu4KZQv.gif)
+
+
+
+
+
+
+
 # 마무리
 이 글이 앞으로 비슷한 요구사항의 개발이 필요할 때 도움이 될 수 있었음 좋겠습니다.
 
