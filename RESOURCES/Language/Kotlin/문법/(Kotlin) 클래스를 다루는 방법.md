@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 
 # 클래스와 프로퍼티
 ![](https://i.imgur.com/x0RLgaJ.png)

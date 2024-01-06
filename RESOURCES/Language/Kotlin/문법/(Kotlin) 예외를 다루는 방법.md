@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # try catch finally 구문
 ```kotlin
 fun parseIntOrThrow(str: String): Int {

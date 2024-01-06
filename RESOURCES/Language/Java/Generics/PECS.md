@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Generics]]"
+---
 # PECS
 
 PECS는 Producer Extends Consumer Super의 약자로, Java Generic의 중요한 개념 중 하나이다.

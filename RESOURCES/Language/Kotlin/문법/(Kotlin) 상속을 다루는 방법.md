@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # 추상 클래스
 ```kotlin
 abstract class Animal(

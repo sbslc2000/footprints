@@ -1,3 +1,7 @@
+---
+상위 개념: "[[Java]]"
+tags:
+---
 # Generic Programming 
 > Generic programming centers around the idea of **abstracting from concrete, efficient algorithms** to obtain **generic algorithms** that can be combined with **different data representations** to produce a wide variety of useful software.
 
@@ -79,6 +83,3 @@ class GenericList<T> {
 
 각각의 list에게는 타입 정보가 있어서 컴파일러가 직접 캐스팅을 수행해주며, 이 과정에서 타입 체크를 수행하여 타입이 맞지 않는 경우 컴파일 레벨에서 에러를 발생시킨다. 
 ![](https://i.imgur.com/MQ2b2xm.png)
-
-## Type Erasure
-[[Type Erasure]]

@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Process]]"
+---
 # 쓰레드
 > **a light-weight process**
 

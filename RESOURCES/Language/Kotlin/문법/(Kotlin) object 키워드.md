@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # static 함수와 변수
 ![](https://i.imgur.com/RLblkuT.png)
 

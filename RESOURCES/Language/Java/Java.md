@@ -1,7 +1,5 @@
+---
+상위 개념: "[[Programming Language]]"
+---
 # Java
 
-
-### 함께 보기
-[[Generics]]
-[[java.lang.Object]]
-[[ThreadLocal]]

@@ -1,3 +1,7 @@
+---
+상위 개념: "[[Process]]"
+---
+# Process Lifecycle and state
 프로세스가 생성되고 삭제되는 사이의 변화하는 상태들을 설명하는 문서입니다.
 
 # N-Model

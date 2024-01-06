@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # 함수 선언 문법
 ```kotlin
 fun max(a: Int, b: Int) = if (a > b) a else b

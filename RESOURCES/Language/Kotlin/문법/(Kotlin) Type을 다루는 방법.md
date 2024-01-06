@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # 기본 타입
 Byte, Short, Int, Long, Float, Double  과 같은 Java에서 지원하는 타입이 Kotlin에도 그대로 존재한다.
 

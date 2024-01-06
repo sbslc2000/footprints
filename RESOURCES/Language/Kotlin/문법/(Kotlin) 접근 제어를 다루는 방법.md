@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # 자바와 코틀린의 가시성 제어
 
 Java에서는 4가지의 접근제어자가 있다, public, protected, default, private

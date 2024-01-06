@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Kotlin 문법]]"
+---
 # for-each
 : 대신 in 을 사용한다. in 뒤에는 iterable이 구현된 타입이라면 모두 들어갈 수 있다.
 ```kotlin
