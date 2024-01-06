@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Topological Sorting]]"
+---
 ## Kahn's Algorithm
 Kahn’s Algorithm은 진입간선과 진출간선에 대해 계산한 결과를 바탕으로 정렬하는 기술이다.
 ### Pseudo Code

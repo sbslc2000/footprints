@@ -1,3 +1,6 @@
+---
+상위 개념: "[[MySQL]]"
+---
 # MySQL Architecture
 MySQL Architecture는 MySQL 서버를 구성하고 있는 구성요소들을 의미한다.
 

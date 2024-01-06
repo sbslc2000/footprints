@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Data Structure]]"
+---
 # Graph
 그래프는 정점*Vertex*와 간선*Edge*로 이루어진 데이터 구조이다.
 

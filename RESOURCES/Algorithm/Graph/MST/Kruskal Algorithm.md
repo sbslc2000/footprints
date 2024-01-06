@@ -8,3 +8,6 @@
 각각의 트리를 집합으로 표현하기 위해 Union-Set 알고리즘을 사용할 수 있다.
 ## Pseudo Code
 ![](https://i.imgur.com/X1bKInh.png)
+
+링크
+[[Minimal Spanning Tree]]

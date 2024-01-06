@@ -1,3 +1,7 @@
+---
+상위 개념: "[[Shortest Path Algorithm]]"
+---
+
 # Dijkstra Algorithm
 다익스트라 알고리즘은 간선들의 가중치가 모두 0 이상인 경우에 해결할 수 있는 알고리즘이다.
 

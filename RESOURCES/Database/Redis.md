@@ -1,3 +1,6 @@
+---
+상위 개념: "[[NoSQL]]"
+---
 # REDIS
 
 Redis (Remote Dictionary Server)는 메모리 기반의 key-value 구조의 데이터 관리 시스템이며, 모든 데이터를 메모리에 저장하고 빠르게 조회할 수 있는 비 관계형 데이터베이스(NoSQL)입니다.

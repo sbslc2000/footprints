@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Algorithm]]"
+---
 # 문제의 종류
 
 ![](https://i.imgur.com/t80kCcq.png)

@@ -1,3 +1,7 @@
+---
+상위 개념: "[[Shortest Path Algorithm]]"
+---
+
 # Floyd-Warshall Algorithm
 플로이드-워샬 알고리즘은 모든 정점 쌍 사이의 최단경로를 구하는 방법으로, 위에서 소개한 알고리즘보다 훨씬 오래걸리는 작업이다.
 

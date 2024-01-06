@@ -1,3 +1,7 @@
+---
+상위 개념: "[[String Matching Algorithm]]"
+---
+# Naive String Matching
 ![](https://i.imgur.com/Gkvd7fw.png)
 
 원시적 매칭 방법은 마치 sliding window 처럼 한쪽에서부터 인덱스를 올려가며 문자열이 같은지 확인하는 알고리즘이다.

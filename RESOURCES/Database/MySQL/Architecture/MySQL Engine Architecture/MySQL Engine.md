@@ -1,10 +1,9 @@
+---
+상위 개념: "[[MySQL Architecture]]"
+---
 # MySQL Engine
 
 MySQL Engine은 MySQL의 두뇌에 해당하는 부분으로, 클라이언트로부터의 접속 및 쿼리 요청을 처리하는 Connection Handler와, SQL Parser, SQL Preprocessor, Optimizer 등으로 이루어져 있다.
-
-[[MySQL 스레딩 구조]]
-[[(MySQL Architecture) 메모리 할당 및 사용 구조]]
-[[쿼리 실행 구조]]
 
 # 이모저모
 * MySQL의 5 버전 대에서는 쿼리 캐시를 제공했었지만, 동시 처리 성능 저하와 많은 버그의 원인이 되어 8.0버전 이후로는 삭제되었다.

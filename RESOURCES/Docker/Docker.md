@@ -12,9 +12,3 @@
 4. 이미지의 파일 스냅샷 부분을 컨테이너의 하드 디스크 부분에 올린다.
 5. 시작 커맨드를 이용하여 애플리케이션을 실행한다.  
     ![Pasted image 20230921112944.png](app://f3816d272c101d2701815a1c574e7bfe569c/Users/goorm/Documents/Obsidian%20Vault/image/Pasted%20image%2020230921112944.png?1695263384107)
-
-
-## 링크
-[[Docker Container]]
-[[Docker Client Command]]
-[[Docker Image]]

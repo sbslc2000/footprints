@@ -7,10 +7,9 @@
 
 # SQL
 
-# NOSQL
-[[Redis]]
 
 [[Redis]]
+
 
 
 ### 참조
