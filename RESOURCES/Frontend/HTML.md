@@ -50,3 +50,4 @@ Semantic이란 의미론이란 뜻으로, **Semantic Element는 의미가 있는
     - html 문서 맨 처음에 명시에서 이 문서의 버전을 나타낸다.
     - <!DOCTYPE html> 은 html5 버전임을 나타낸다.
 
+asdfasdfasdf
