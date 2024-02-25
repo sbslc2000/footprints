@@ -88,3 +88,79 @@ implementation("com.google.protobuf:protobuf-java:3.25.3")
 ```
 
 ## Proto API 살펴보기
+컴파일을 수행하면 다음과 같은 클래스들이 생성된다.
+![](https://i.imgur.com/sZwKRSn.png)
+
+AddressBook, Person 은 message 지시자를 통해 생성된 클래스이다. Person의 내부 message 지시자를 통해 Person.PhoneNumber도 생성된다.
+
+### 객체 생성
+
+각각의 클래스는 클래스명.newBuilder()를 통해 객체를 생성할 수 있다.
+```java
+Person.PhoneNumber phoneNumber = Person.PhoneNumber  
+        .newBuilder()  
+        .setNumber("01042645540")  
+        .build();  
+  
+Person person = Person.newBuilder()  
+        .addPhones(phoneNumber)  
+        .setEmail("sbslc2000")  
+        .setName("Pete")  
+        .build();  
+  
+AddressBook addressBook = AddressBook.newBuilder()  
+        .addPeople(person)  
+        .build();
+```
+
+### 메시지 확인
+* **isInitialized()** : 필수 항목이 모두 설정되었는지 확인한다.
+* **clear()** : 모든 상태를 빈 값으로 지운다.
+* **toString()** : 사람이 읽을 수 있는 메시지 표현을 반환한다.
+* **mergeFrom(Message other)** : 빌더의 내용을 other에 병합하여 필드를 덮어씁니다.
+
+### 구문 분석 및 직렬화
+* **byte\[] toByteArray()** : 메시지를 직렬화하고 원시 바이트가 포함된 바이트 배열을 반환한다.
+* **static Person parseFrom(byte\[] data)** : 주어진 바이트 배열에서 메시지를 구문 분석한다.
+* **void writeTo(OutputStream output)** : 메시지를 직렬화하여 outputStream에 전송한다.
+* **static Person parseFrom(InputStream input)** : InputStream에서 메시지를 읽고 구문 분석한다.
+
+
+### 테스트
+```java
+@Test  
+void testProto() {  
+    // Given  
+    Person.PhoneNumber phoneNumber = Person.PhoneNumber  
+            .newBuilder()  
+            .setNumber("01042645540")  
+            .build();  
+  
+    Person person = Person.newBuilder()  
+            .addPhones(phoneNumber)  
+            .setEmail("sbslc2000")  
+            .setName("Pete")  
+            .build();  
+  
+    AddressBook addressBook = AddressBook.newBuilder()  
+            .addPeople(person)  
+            .build();  
+  
+    byte[] protoBufByteArray = addressBook.toByteArray(); // protobuf 직렬화  
+    byte[] javaByteArray = null; // java 직렬화  
+  
+    try(ByteArrayOutputStream baos = new ByteArrayOutputStream()) {  
+        try (ObjectOutputStream oos = new ObjectOutputStream(baos)) {  
+            oos.writeObject(addressBook);  
+            javaByteArray = baos.toByteArray();  
+        }  
+    } catch (IOException e) {  
+        throw new RuntimeException(e);  
+    }  
+  
+    System.out.println(protoBufByteArray.length); // 34  
+    System.out.println(javaByteArray.length); // 451  
+}
+```
+
+protoBuf로 직렬화한 바이트 크기와 자바의 기본 직렬화를 수행한 바이트 크기가 확연히 차이가 나는 것을 확인할 수 있다.
