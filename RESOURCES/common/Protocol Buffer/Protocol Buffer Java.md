@@ -70,6 +70,21 @@ message AddressBook {
 
 필드 뒤에 들어오는 수치는 고유한 tag를 지정하는데에 사용되는 marker이다. 1-15는 인코딩하는데에 더 1 바이트가 덜 드므로 반복되는 요소에 사용하는 것이 좋고, optional한 요소에 대해서는 16 이상의 태그를 사용하면 좋다.
 
-* optional : 이 필드는 값이 설정되지 않은 경우 기본 값을 제공하며, 아니라면 시스템 기본 값이 제공된다. (숫자의 경우 0, 문자열의 경우 빈 문자열, boolean의 경우 false) 
-* repeated : 0번 이상 반복될 수 잇는 필드들을 의미합니다 <- 이게 의미하는 바가 뭘까요? -> 동적인 크기의 배열에 사용
-* required : 필드값이 꼭 제공되어야 하는 경우입니다. 초기화되지 않은 경우 IOException이 발생한다.
+* **optional** : 이 필드는 값이 설정되지 않은 경우 기본 값을 제공하며, 아니라면 시스템 기본 값이 제공된다. (숫자의 경우 0, 문자열의 경우 빈 문자열, boolean의 경우 false) 
+* **repeated** : 0번 이상 반복될 수 잇는 필드들을 의미합니다 <- 이게 의미하는 바가 뭘까요? -> (동적인 크기의 배열에 사용한다고 합니다.)
+* **required** : 필드값이 꼭 제공되어야 하는 경우이다. 초기화되지 않은 경우 IOException이 발생한다. 
+	* required의 경우 proto3 버전에서는 삭제되었습니다.
+
+## 프로토콜 버퍼 컴파일하기
+`protoc ./src/main/java/org/example/AddressBook.proto --java_out=./src/main/java/ `
+
+이때, .proto의 package에 org.example이 적혀있다면 의도된 위치에 파일이 생성된다.
+
+컴파일 이후에 클래스를 온전히 사용하려면 다음 의존성을 추가해주어야 한다.
+
+```groovy
+// https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java  
+implementation("com.google.protobuf:protobuf-java:3.25.3")
+```
+
+## Proto API 살펴보기
