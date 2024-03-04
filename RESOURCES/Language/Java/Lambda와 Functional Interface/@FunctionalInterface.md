@@ -18,8 +18,9 @@ public @interface FunctionalInterface {}
 2. 해당 타입이 Functional Interface의 요건을 만족하지 못하는 경우
 
 ### 왜 RUNTIME Retention을 가지고 있을까?
-컴파일레벨에서 Functional Interface의 요건을 만족하는지 검사하는 기능은 SOURCE 정책으로도 충분하다. 
-Functional Interface는 2가지 기능을 제공한다.
-1. 
+컴파일레벨에서 Functional Interface의 요건을 만족하는지 검사하는 기능은 SOURCE 정책으로도 충분하다. 그런데 왜 @FunctionalInterface는 RUNTIME Retention을 갖고 있을까?
 
+@FunctionalInterface와 관련한 정보를 런타임에 보존하면 다음과 같은 장점이 생긴다.
+1. 런타임에 리플렉션을 통한 분석과 처리를 가능하게 한다.
+2. #todo 아래 글 내용을 아직은 잘 모르겠다.
 [java - Why does @FunctionalInterface have a RUNTIME retention? - Stack Overflow](https://stackoverflow.com/questions/27121563/why-does-functionalinterface-have-a-runtime-retention)

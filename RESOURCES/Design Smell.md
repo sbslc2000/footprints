@@ -15,4 +15,3 @@ Design smells = **various signs and symptoms** of bad design
 - **Opacity** : 만든 사람의 의도를 파악하기 어려운 상태.
 
 ![[Pasted image 20230920234124.png]]
-ㅁㄴㅇㄹㅁㄴㅇㄹ
