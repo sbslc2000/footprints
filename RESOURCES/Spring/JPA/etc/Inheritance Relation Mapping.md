@@ -147,3 +147,6 @@ public abstract class BaseEntity {
 @MappedSuperclass가 사용된 클래스는 자식에게 매핑 정보만 제공하며, 조회, 검색의 대상이 되지 않는다. 직접 생성해서 사용할 일이 없으므로 추상클래스로 만들 것을 권장한다.
 
 참고: @Entity 클래스는 엔티티나 @MappedSuperclass로 지정한 클래스만 상속이 가능하다.
+
+
+
