@@ -107,7 +107,7 @@ IntStream.range(1, 10)
 ```
 
 ### reduce
-주어진 BiFunction으로 값을 접어나감
+주어진 BiFunction으로 값을 접어나간다.
 ```java
 IntStream.range(1, 10)
 	.reduce((prev, cur) -> {
