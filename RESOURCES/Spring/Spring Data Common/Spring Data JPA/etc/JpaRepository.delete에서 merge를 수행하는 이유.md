@@ -1,3 +1,6 @@
+---
+상위 개념: "[[JpaRepository]]"
+---
 ## delete에서 merge가 수행되는 이유
 JpaRepository의 delete의 내부 코드는 다음과 같이 작성되어있다.
 ```java

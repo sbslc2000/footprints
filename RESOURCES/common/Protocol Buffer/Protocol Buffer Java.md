@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Protocol Buffer]]"
+---
 # Protocol Buffer Java Tutorial
 해당 내용은 Protocol Buffer 2 버전을 기준으로 작성되었습니다.
 
