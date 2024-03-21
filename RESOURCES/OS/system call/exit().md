@@ -1,3 +1,6 @@
+---
+상위 링크: "[[System call]]"
+---
 프로세스의 종료를 알리는 Unix 계열 운영체제의 system call이다.
 
 

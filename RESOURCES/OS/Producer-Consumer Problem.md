@@ -1,3 +1,6 @@
+---
+상위 링크:
+---
 # Producer-Consumer Problem
 생산자-소비자 문제란 여러개의 프로세스를 어떻게 동기화할 것인가에 관한 고전적인 문제이다. 한정 버퍼 문제*bounded-buffer problem* 라고도 불린다.
 
