@@ -5,7 +5,9 @@
 ThreadLocal은 멀티쓰레드 환경에서 쓰레드 영역에 변수를 저장할 수 있게 해주는 기능이다.
 
 ```java
-ThreadLocal<String> str = new ThreadLocal<>(); str.set("Hello, ThreadLocal!"); System.out.println(str.get()); //Hello, ThreadLocal! 
+ThreadLocal<String> str = new ThreadLocal<>(); 
+str.set("Hello, ThreadLocal!"); 
+System.out.println(str.get()); //Hello, ThreadLocal! 
 str.remove();
 ```
 
