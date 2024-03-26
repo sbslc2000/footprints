@@ -37,5 +37,3 @@ public @interface SpringBootApplication {
   
 }
 ```
-
-## 합성 애노테이션 설명

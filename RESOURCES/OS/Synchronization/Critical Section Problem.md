@@ -1,3 +1,6 @@
+---
+상위 링크: "[[OS]]"
+---
 임계구역*Critical Section*이란 둘 이상의 스레드가 동시에 접근할 때에 문제가 발생할 수 있는 코드 영역을 의미합니다.
 ![](https://i.imgur.com/QW0Whux.png)
 
