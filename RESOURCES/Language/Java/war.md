@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Java]]"
+상위 개념: "[[Java Packaging]]"
 ---
 # war
 WAR(Web Application Archive)라는 이름에서 알 수 있듯 WAR 파일은 웹 애플리케이션 서버 (WAS) 에 배포할 때 사용하는 파일이다.
