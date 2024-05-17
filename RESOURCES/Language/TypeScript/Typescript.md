@@ -11,9 +11,9 @@ Typescript는 자바스크립트를 더 안전하게 사용할 수 있도록 타
 let a:number = 1; // 변수 a에는 숫자 외의 다른 타입이 들어올 수 없음!
 let b:number = 2;
 
-console.log(a + b1);
+console.log(a + b);
 ```
 
 ## 동작 원리
-
-ㄹ
+![](https://i.imgur.com/GgFs576.png)
+Typescript 컴파일 과정에서는 AST를 만든 이후 타입 검사를 통해 검증을 수행한다. 이후 JS로 변경하여 새롭게 컴파일을 수행하게 된다. JS단에서 타입 관련된 부분은 모두 제거되고 안전한 JS 소스코드가 바이트코드로 변환된다.
