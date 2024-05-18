@@ -17,3 +17,15 @@ console.log(a + b);
 ## 동작 원리
 ![](https://i.imgur.com/GgFs576.png)
 Typescript 컴파일 과정에서는 AST를 만든 이후 타입 검사를 통해 검증을 수행한다. 이후 JS로 변경하여 새롭게 컴파일을 수행하게 된다. JS단에서 타입 관련된 부분은 모두 제거되고 안전한 JS 소스코드가 바이트코드로 변환된다.
+
+## 환경설정
+```
+//nodejs 패키지 초기화
+npm init 
+
+// node.js 내장 기능에 대한 타입정보를 갖고있는 패키지
+npm i @types/node 
+
+// ts 컴파일러 설치
+npm i typescript -g
+```
