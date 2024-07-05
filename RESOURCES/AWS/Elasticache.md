@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Amazon Web Service]]"
+---
 # ElastiCache
 Elasticache는 클라우드 환경에서 Memcached 또는 Redis 프로토콜을 준수하는 캐시의 배포 및 실행을 간소화하는 웹 서비스이다.
 
