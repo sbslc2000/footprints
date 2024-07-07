@@ -6,7 +6,7 @@
 
 Protocol Buffer는 언어 중립적, 플랫폼 중립적인 직렬화 매커니즘이다.
 
-## Protocol Buffer로 해결할 수 있는 문제
+## Protocol Buffer로 해결할 수  있는 문제
 Protocol Buffer는 구조화된 데이터를 더 적은 패킷을 가진 형태로 직렬화할 수 있게 해준다. 이러한 형태는 **일회성의 네트워크 전송**과 **장기 데이터 저장**에 모두 적합하다. Protocol Buffer는 새로운 데이터가 추가되더라도 기존의 데이터가 무효화되거나 업데이트 되어야할 필요 없이 확장 가능하다.
 
 Protocol Buffer는 구글에서 가장 흔하게 쓰인다. 구글에서는 inter-server communication 뿐만 아니라 disk에 데이터를 아카이빙하는데에도 사용한다.
