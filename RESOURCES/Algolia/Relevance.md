@@ -16,11 +16,13 @@ Ranking을 통해 알고리아는 연관성이 높은 데이터를 먼저 사용
 2. 오타가 하나 있는 쿼리
 3. 오타가 2개 있는 쿼리
 
+Typo vs Exact vs Words
+Algolia의 Exact, Words, Typo 랭킹 기준은 얼마라 레코드와 쿼리의 문자열이 일치해야 관련 레코드로 반환할지를 결정한다.
+![](https://i.imgur.com/Mrv7j1c.png)
+
 ### GEO
 지리 검색 기능이 사용되는 경우, 결과는 가장 가까운 곳으로부터 가장 먼 곳까지 거리순으로 정렬된다.
 
-### 단어
-optionalWords 설정을 수행한다면
 ## Index 설정 및 쿼리 매개변수
 Relevance에 대한 설정은 두 가지 방법으로 수행할 수 있다.
 
