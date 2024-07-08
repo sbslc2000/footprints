@@ -1,7 +1,6 @@
 ---
 상위 링크: "[[Computer Architecture]]"
 ---
-
 # Performance
 ## 컴퓨팅 성능을 평가하는 두 요소
 1. 응답시간*Response Time*
