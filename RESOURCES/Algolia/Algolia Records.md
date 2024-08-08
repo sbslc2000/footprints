@@ -14,7 +14,7 @@
 ```
 
 ## Searchable Attributes
-모든 속성들은 기본적으로 검색 가능하지만, 더 나은 검색을 위해서는 오직 검색의 대상이 되어야 하는 속성들만 검색의 대상이 되도록 해야한다. [Searchable Arrtibute](RESOURCES/Algolia/sending-and-managing-data/Algolia%20Searchable%20attributes.md)를 통하여 검색가능 속성의 순위를 매김으로써 다른 속성들보다 더욱 가중치를 높게 부여하여 검색의 결과를 바꿀 수도 있다.
+모든 속성들은 기본적으로 검색 가능하지만, 더 나은 검색을 위해서는 오직 검색의 대상이 되어야 하는 속성들만 검색의 대상이 되도록 해야한다. [Searchable Arrtibute](Algolia%20Searchable%20attributes.md)를 통하여 검색가능 속성의 순위를 매김으로써 다른 속성들보다 더욱 가중치를 높게 부여하여 검색의 결과를 바꿀 수도 있다.
 
 ## Structuring records
 레코드를 구성할 때, 서비스에서 유지하는 모든 데이터를 다 알고리아 레코드로 만들 필요는 없다. 오직 데이터를 검색하기 위한 가치가 있는 정보들만 레코드에 포함시키면 충분하다. 
