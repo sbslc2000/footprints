@@ -21,7 +21,7 @@ for (i in 1..3) {
 //역방향
 for (i in 3 downto 1) {
 	println(i)
-}
+} 
 
 //2칸씩
 for (i in 1..5 step 2) {
