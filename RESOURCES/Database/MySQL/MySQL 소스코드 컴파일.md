@@ -13,6 +13,7 @@ cd ~/mysql-source
 
 # MySQL 소스 코드 클론 (기본 브랜치)
 git clone https://github.com/mysql/mysql-server.git .
+//현재 커밋 [Update License Book · mysql/mysql-server@596f0d2 · GitHub](https://github.com/mysql/mysql-server/commit/596f0d238489a9cf9f43ce1ff905984f58d227b6)
 ```
 
 
@@ -21,9 +22,10 @@ git clone https://github.com/mysql/mysql-server.git .
 mkdir build
 cd build
 cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost
+cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost -DCMAKE_CXX_STANDARD=14
 ```
 
 5. 빌드
 ```
-
+make -j2
 ```
