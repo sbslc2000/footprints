@@ -29,3 +29,15 @@ cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost -DCMAKE_CXX_STANDARD=14
 ```
 make -j2
 ```
+
+
+### lto-wrapper
+```
+Linking CXX shared library library_output_directory/libserver_unittest_library.so
+c++: fatal error: Killed signal terminated program lto1
+compilation terminated.
+lto-wrapper: fatal error: /usr/bin/c++ returned 1 exit status
+compilation terminated.
+```
+
+lto -> linking optimizor에서 메모리를 너무 많이 잡아먹어 프로세스가 강제로 종료된 것으로 추정된다.
