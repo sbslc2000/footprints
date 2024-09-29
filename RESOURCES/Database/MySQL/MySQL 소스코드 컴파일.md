@@ -40,4 +40,7 @@ lto-wrapper: fatal error: /usr/bin/c++ returned 1 exit status
 compilation terminated.
 ```
 
-lto -> linking optimizor에서 메모리를 너무 많이 잡아먹어 프로세스가 강제로 종료된 것으로 추정된다.
+lto -> linking optimizor에서 메모리를 너무 많이 잡아먹어 프로세스가 강제로 종료된 것으로 추정된다. 다시 수행하니 성공했다.
+
+# 이후 작업
+1. mysql user 생성
