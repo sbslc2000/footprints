@@ -44,3 +44,20 @@ lto -> linking optimizor에서 메모리를 너무 많이 잡아먹어 프로세
 
 # 이후 작업
 1. mysql user 생성
+```
+useradd -r -s /bin/false -d /nonexistent -M mysql
+```
+1. 권한 부여
+```
+sudo chown -R mysql:mysql /usr/src/mysql/mysql-server/build/data/
+sudo chmod -R 755 /usr/src/mysql/mysql-server/build/data/
+```
+1. datadir 초기화
+```
+sudo -u mysql /usr/src/mysql/mysql-server/build/runtime_output_directory/mysqld --initialize --datadir=/usr/src/mysql/mysql-server/build/data
+```
+
+4. 서버 실행
+```
+sudo -u mysql mysql-server/build/runtime_output_directory/mysqld --datadir=/usr/src/mysql/data > mysqld.out 2>&1 &
+```
