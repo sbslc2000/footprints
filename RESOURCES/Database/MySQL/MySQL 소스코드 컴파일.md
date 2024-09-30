@@ -22,7 +22,7 @@ git clone https://github.com/mysql/mysql-server.git .
 mkdir build
 cd build
 cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost
-cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost -DCMAKE_CXX_STANDARD=14
+cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=../boost -DCMAKE_CXX_STANDARD=17 (8.4)
 ```
 
 5. 빌드
