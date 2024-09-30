@@ -61,3 +61,5 @@ sudo -u mysql /usr/src/mysql/mysql-server/build/runtime_output_directory/mysqld 
 ```
 sudo -u mysql mysql-server/build/runtime_output_directory/mysqld --datadir=/usr/src/mysql/data > mysqld.out 2>&1 &
 ```
+
+5. 서버 실행 시, 인증 피하기
