@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Computer Science]]"
+---
 # Design Pattern
 > A solution to a problem in a context
 
