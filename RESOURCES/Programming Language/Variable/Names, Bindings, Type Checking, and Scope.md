@@ -1,0 +1,12 @@
+---
+상위 링크: "[[RESOURCES/Programming Language/Programming Language|Programming Language]]"
+---
+> 변수는 속성이나 속성의 모음으로 특정지어질 수 있으며, 그것 중 가장 중요한 것은 type이다. 프로그래밍 언어의 데이터 타입을 설계하기 위해서는 범위, 수명, 타입검사, 초기화 등 다양한 문제를 고려해야한다.
+
+# Names, Bindings, Type Checking, and Scope
+
+폰 노이만 컴퓨터에서 동작하는 Imperative Language는 메모리와 CPU로 구성된 컴퓨터에서 동작한다. 메모리는 명령어와 데이터를 저장하며, CPU는 메모리의 값을 변경할 수 있는 연산을 수행한다.
+
+이러한 맥락에서 변수는 메모리 공간에 대한 추상화*an abstraction of memory cell*라고 할 수 있다. 변수는 데이터 타입, 스코프, 생애주기, 타입체킹, 초기화 같은 특성들로 구성된다.
+
+현실세계와 잘 맞는 변수를 정의하는 것은 현실세계의 문제영역을 컴퓨터의 세계로 끌어오기에 유리하기에, 변수를 잘 구성하는 것은 컴퓨터공학 이론에서 매우 중요한 영역이다.
