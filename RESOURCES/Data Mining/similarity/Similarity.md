@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Similarity]]"
+상위 링크: "[[Data Mining]]"
 ---
 # Similarity
 

@@ -1,5 +1,6 @@
 ---
-상위 링크: "[[Computer Network]]"
+상위 링크: "[[Physical Layer]]"
+상위 개념:
 ---
 # Modulation
 
