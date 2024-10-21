@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Computer Science]]"
+상위 링크:
 ---
 # Database란?
 Database는 구조화된 정보 혹은 데이터의 조직화된 모음을 뜻한다.
