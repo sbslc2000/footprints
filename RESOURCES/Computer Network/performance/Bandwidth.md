@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Computer Network]]"
+상위 링크: "[[Network Performance]]"
 ---
 # Bandwidth
 
