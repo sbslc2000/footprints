@@ -63,7 +63,7 @@ public class Singleton {
 ```
 synchronized 키워드를 사용하여 getInstance 메서드 내부에 동시에 접근할 수 있는 쓰레드 개수를 1개로 제한하는 방법이 있다.
 
-이 방법은 싱글톤을 온전히 보장하지만, lock의 범위가 커 성능적인 단점이 있다.  물론 경쟁조건이 별로 없을만한 상황이라면 좋은 방법일 수 있다.
+이 방법은 싱글톤을 온전히 보장하지만, lock의 범위가 커 성능적인 단점이 있다. 모든 쓰레드들은 getInstance를 호출할 때마다 경쟁 조건에 걸린다. 물론 경쟁조건이 별로 없을만한 상황이라면 좋은 방법일 수 있다.
 
 ## Option 2 : Global Variable
 ```
@@ -84,3 +84,50 @@ public class Singleton {
 따라서 이 방법은 해당 객체가 거의 무조건 사용된다는 가정하에는 좋은 방법일 수 있다. 별다른 런타임 오버헤드도 없으며 경쟁조건도 발생하지 않기 때문이다.
 
 ## Option 3: Double-checked Locking
+
+Option1은 Lock의 범위가 너무 넓다는 부분이 문제였다. Lock의 범위를 축소시키면 어떨까?
+
+생성만 1번 수행되게 만들어야 하니 new Singleton()에 대해서만 경쟁을 시키도록 만들어 볼 수 있다.
+
+```java
+public class Singleton {
+	private static Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			synchronized(Singleton.class) {
+				uniqueInstance = new Singleton();
+			}
+		}
+		return uniqueInstance;
+	}
+
+}
+```
+
+하지만 이 방법은 여전히 동시성 문제가 남아있다. 서로 다른 두 쓰레드가 null 체크를 동시에 수행한 뒤 하나는 lock을 획득하여 new를 수행하고, 다른 쓰레드는 lock 획득을 기다린 후  new를 수행하게 될 수 있다.
+
+이러한 문제를 해결하기 위해 double-check locking을 사용할 수 있다.
+```java
+public class Singleton {
+	private static Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			synchronized(Singleton.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
+		}
+		return uniqueInstance;
+	}
+
+}
+```
+
+이 방법은 일단 lock을 획득해서 들어온 쓰레드들에게 uniqueInstance의 null 체크를 한번 더 수행하게 만든다. 
