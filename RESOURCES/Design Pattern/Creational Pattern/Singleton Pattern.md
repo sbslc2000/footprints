@@ -130,4 +130,28 @@ public class Singleton {
 }
 ```
 
-이 방법은 일단 lock을 획득해서 들어온 쓰레드들에게 uniqueInstance의 null 체크를 한번 더 수행하게 만든다. 
+이 방법은 일단 lock을 획득해서 들어온 쓰레드들에게 uniqueInstance의 null 체크를 한번 더 수행하게 만든다. 이는 synchronized로 들어온 쓰레드들에게 한번 더 null 체크를 수행하게 만들어, 앞에서 제어를 가져갔던 쓰레드가 new를 호출했다면 다음번에 lock을 획득한 쓰레드들은 인스턴스 생성을 하지 않으므로, 논리적으로는 하나의 인스턴스가 유지된다.
+
+이 방법은 최초의 if문이 없어도 논리적으로 하나의 인스턴스가 유지되긴 하지만, 최초 if문은 경쟁조건을 최소화하기 위한 목적으로 존재하므로 성능 향상의 이점이 있다.
+
+하지만 이는 자바 언어의 특징으로 인해 멀티쓰레드에서 문제가 발생하곤 하였다. JVM 1.5 버전 이후에서는 volatile 키워드를 uniqueInstance 변수에 사용하여 메인 메모리의 주소를 직접 제어하고 레지스터나 로컬 메모리에 캐싱하지 않게 만들어 문제를 해결할 수 있다.
+
+```java
+public class Singleton {
+	private static volatile Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			synchronized(Singleton.class) {
+				if (uniqueInstance == null) {
+					uniqueInstance = new Singleton();
+				}
+			}
+		}
+		return uniqueInstance;
+	}
+
+}
+```
