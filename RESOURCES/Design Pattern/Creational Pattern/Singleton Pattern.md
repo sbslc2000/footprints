@@ -1,7 +1,6 @@
 ---
 상위 링크: "[[Creational Pattern]]"
 ---
-
 # Singleton Pattern
 
 ## Purpose
