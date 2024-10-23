@@ -1,0 +1,86 @@
+---
+상위 링크: "[[Creational Pattern]]"
+---
+
+# Singleton Pattern
+
+## Purpose
+> Ensures that only one instance of a class is allowed within a system
+
+Singleton Pattern은 시스템 내에 특정 클래스의 인스턴스가 1개만 유지되도록 보장하기 위해 사용한다.
+
+기본적으로는 시스템 내에 인스턴스가 오직 한 개만 필요하거나, 한 개로 충분할 때 사용한다. 싱글톤 패턴의 매커니즘을 약간만 조정하면 인스턴스의 개수를 상수개로 제한하는 패턴으로 사용할 수도 있다.
+
+## 기본 구조
+```java
+public class Singleton {
+	private static Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static Singleton getInstance() {
+		if (uniqueInstance == null) {
+			uniqueInstance = new Singleton();
+		}
+
+		return uniqueInstance;
+	}
+
+}
+```
+
+1. private 생성자를 통해 외부에서 임의로 인스턴스를 생성하는 동작을 막아야 한다.
+2. uniqueInstance 변수, getInstance() 메서드
+	1. 인스턴스를 하나만 만들어야 하기 때문에 클래스레벨에서 유지할 수 있는 공간 사용
+	2. 이미 만들어져있다면 그 객체를 반환, 없다면 객체를 생성해서 반환
+	3. Static이기에 인스턴스가 없더라도 호출 가능
+
+## Class Diagram
+
+![](https://i.imgur.com/uqjWNQA.png)
+
+# Thread-safe Singleton Pattern
+멀티 쓰레드 환경에서는 instance가 2번 이상 생성될 가능성이 열려있다. 상황에 따라서는 하나의 쓰레드에서 반환한 인스턴스와 다른 쓰레드에서 반환한 인스턴스가 다를 수도 있다.
+
+다음 해결책들은 Java 언어에 국한된 해결법으로, 다른 언어에서는 다른 해결법을 사용해야할 수 있다.
+
+## Option 1 : synchronized keyword
+```java
+public class Singleton {
+	private static Singleton uniqueInstance;
+
+	private Singleton() {}
+
+	public static synchronized Singleton getInstance() {
+		if (uniqueInstance == null) {
+			uniqueInstance = new Singleton();
+		}
+
+		return uniqueInstance;
+	}
+
+}
+```
+synchronized 키워드를 사용하여 getInstance 메서드 내부에 동시에 접근할 수 있는 쓰레드 개수를 1개로 제한하는 방법이 있다.
+
+이 방법은 싱글톤을 온전히 보장하지만, lock의 범위가 커 성능적인 단점이 있다.  물론 경쟁조건이 별로 없을만한 상황이라면 좋은 방법일 수 있다.
+
+## Option 2 : Global Variable
+```
+public class Singleton {
+	private static Singleton uniqueInstance = new Singleton();
+
+	private Singleton() {}
+
+	public static synchronized Singleton getInstance() {
+		return uniqueInstance;
+	}
+
+}
+```
+
+이 방법은 Option 1과 다르게 쓰레드들이 아무런 경쟁 없이 인스턴스를 획득할 수 있으며, 유일성도 보장된다. 하지만 로드 시 무조건 초기화가 되므로 인스턴스를 사용하지 않는 환경에서도 로딩되므로 불필요한 비용을 증가시킬 수도 있다.
+
+따라서 이 방법은 해당 객체가 거의 무조건 사용된다는 가정하에는 좋은 방법일 수 있다. 별다른 런타임 오버헤드도 없으며 경쟁조건도 발생하지 않기 때문이다.
+
+## Option 3: Double-checked Locking
