@@ -93,3 +93,6 @@ public class TestSuite implements Test {
 이 방법은 중간노드와 단말노드 각각에서만 수행되어야 하는 메서드를 구분하지 않으므로 안정성이 떨어질 수 있다.
 ![](https://i.imgur.com/aRdYCKB.png)
 위 방법은 단말노드와 중간노드의 공통 메서드만 Component에 취급하는 방식이다. 안정성은 높지만, 모든 객체를 일관되게 다루지 못하고 downcast를 수행해야 할 수도 있다.
+
+## Example Source Code
+[design-pattern-example/src/main/java/io/github/sbslc2000/composite at main · sbslc2000/design-pattern-example · GitHub](https://github.com/sbslc2000/design-pattern-example/tree/main/src/main/java/io/github/sbslc2000/composite)
