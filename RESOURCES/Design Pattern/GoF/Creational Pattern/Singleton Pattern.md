@@ -154,3 +154,6 @@ public class Singleton {
 
 }
 ```
+
+## Example Source Code
+[design-pattern-example/src/main/java/io/github/sbslc2000/singleton at main · sbslc2000/design-pattern-example · GitHub](https://github.com/sbslc2000/design-pattern-example/tree/main/src/main/java/io/github/sbslc2000/singleton)
