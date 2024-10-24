@@ -7,6 +7,7 @@
 ```shell
 brew search jdk
 ```
+
 ![[Pasted image 20230921190323.png]]
 
 2. 설치
@@ -15,4 +16,3 @@ brew install openjdk@8
 ```
 
 3. 환경변수 설정
-4

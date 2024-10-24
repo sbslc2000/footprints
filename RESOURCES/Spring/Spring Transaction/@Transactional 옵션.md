@@ -38,7 +38,6 @@ noRollbackFor은 rollbackFor의 반대 역할을 한다.
 
 ### propagation
 [[트랜잭션 전파]]
-
 ### isolation
 [트랜잭션 격리 수준](ACID.md##Isolation%20Level)을 지정할 수 있다. 기본 값은 DEFAULT로 데이터베이스에서 설정한 기준을 따른다. 
 ### timeout

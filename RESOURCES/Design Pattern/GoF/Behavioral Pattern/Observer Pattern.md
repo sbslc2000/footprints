@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Behavioral Pattern]]"
+---
 # Observer Pattern
 
 ## Purpose
