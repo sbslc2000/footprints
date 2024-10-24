@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Object-oriented Programming]]"
+---
 # Design Smell
 
 설계원칙은 왜 필요한가? → 설계 악취

@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Algorithm]]"
+---
 # Asymptotic Analysis
 Asymptotic Analysis, 점근적 분석은 알고리즘에서 입력의 크기가 충분히 큰 경우에 대한 분석을 의미한다.
 
