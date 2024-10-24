@@ -15,3 +15,6 @@ Observer Pattern은 하나의 객체의 상태가 변경될 때 다른 객체들
 ## Class Diagram
 
 ![](https://i.imgur.com/j8CHXLf.png)
+
+## Example Source Code
+[design-pattern-example/src/main/java/io/github/sbslc2000/observer at main · sbslc2000/design-pattern-example · GitHub](https://github.com/sbslc2000/design-pattern-example/tree/main/src/main/java/io/github/sbslc2000/observer)
