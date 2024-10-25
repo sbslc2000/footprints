@@ -14,5 +14,4 @@ d = \left( \sum_{i=1}^{n} |x_i - y_i|^p \right)^{\frac{1}{p}}
 $$ 
 
 ## parameter
-
 parameter가 1인 경우 Manhattan distance, parameter가 2인 경우 Euclidean Distance, paramter 가 무한대로 수렴하는 경우 Supremum Distance와 동일하다.
