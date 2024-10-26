@@ -26,3 +26,4 @@
 ## Class Diagram
 
 ![](https://i.imgur.com/eVvkSUv.png)
+
