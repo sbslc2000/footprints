@@ -1,5 +1,6 @@
 ---
 상위 링크: "[[Rust]]"
+공식 링크: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html
 ---
 # Ownership
 
