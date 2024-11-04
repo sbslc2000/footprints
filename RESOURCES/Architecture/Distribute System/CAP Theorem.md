@@ -1,5 +1,7 @@
 # CAP Theorem
-CAP 이론은 Consistency, Availability, Partition Tolerance의 속성을 의미한다.
+![](https://i.imgur.com/ms2P7vh.png)
+
+CAP 이론은 대규모 시스템이 갖는 Consistency, Availability, Partition Tolerance의 속성을 설명한다.
 
 * **Consistency**(일관성) : 스토리지와 관련된 영역에서 상태의 일관성을 의미
 * **Availability**(가용성) : 서비스가 어떠한 상황에서도 잘 동작하는 상태를 의미
