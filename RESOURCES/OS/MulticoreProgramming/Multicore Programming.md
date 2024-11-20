@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[OS]]"
+상위 링크: "[[Operating System]]"
 ---
 # Multicore Programming
 멀티코어 프로그래밍이란 단일 컴퓨팅 칩에 여러 컴퓨팅 코어를 배치하여 여러개의 job이 동시에 수행될 수 있게 하는 컴퓨터 설계 방법이다. 이를 통해 기존에 단일 CPU로 병행성을 제공하던 시스템은 [병렬성](Concurrency와%20Parallelism)을 제공할 수 있게 되었다.

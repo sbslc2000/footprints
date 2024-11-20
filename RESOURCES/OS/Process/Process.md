@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[OS]]"
+상위 링크: "[[Operating System]]"
 ---
 ## 개념
 > **Program In Execution**
