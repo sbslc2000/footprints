@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Names, Bindings, Type Checking, and Scope]]"
+---
 # Coercion
 
 > Automatic Type Conversion by compiler

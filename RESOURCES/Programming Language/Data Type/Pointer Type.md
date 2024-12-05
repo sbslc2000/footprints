@@ -2,27 +2,25 @@
 상위 링크: "[[Data Type]]"
 ---
 # Pointer and Reference Types
-- 포인터 타입
-    - 실제로 데이터를 저장하는 다른 타입과 다르게, **메모리 주소**와 **NIL** 을 가질 수 있는 데이터 타입 _variables have a range of values that consists of memory address and a special value, **NIL**_
-        - _**NIL**_ : 유효한 주소가 아니다. 참조할 수 없다. 를 가리키는 특수한 값 _nil is not a valid address, pointer cannot currently be used to reference a memory cell._
-    - 포인터는 **간접 주소 지정** _indirect addressing_ 과 **동적 할당 관리** _dynamic storage management_을 위해 사용한다.
-        - pointer는 heap을 가리킬 수 있기 때문에
-- 포인터 타입을 프로그램의 writability를 높여준다.
+
+포인터 타입이란 실제 데이터를 저장하는 타입과 다르게, 메모리 주소와 NIL을 가질 수 있는 데이터 타입을 의미한다.  포인터 타입은 간접 주소 지정 *indirect addressing* 과 동적 할당 관리 *dynamic storage management* 를 위해 사용하며, 언어의 작성력을 높여주는 효과를 갖는다.
+
+>[!info]
+>NIL이란 유효하지 않은 주소, 혹은 참조할 수 없는 주소를 가리키는 특수한 값이다.
+
     
 
 ## 설계 이슈
-
 - 포인터 변수의 scope와 생애주기는?
 - 동적 변수의 생애주기는?
 - 포인터가 가리킬 수 있는 개체를 제한해야하나?
     - 이는 타입 검사와 매우 연관되어있다.
 
 ## Pointer Operations
-
 - 포인터는 기본적으로 2가지 연산을 제공한다.
 - _**Assignment :**_ **배정 연산**
-    - 포인터 변수에 특정한 개체의 주소를 할당하는 것 ****_Set a pointer variable to the address of some object_
-    - 동적 할당은 암시적으로 포인터를 줄 수 있지만, indirect addressing은 explicit operator나 build-in subprogram이 있어야한다.
+    - 포인터 변수에 특정한 개체의 주소를 할당하는 것 
+    - 동적 할당은 암시적으로 포인터를 줄 수 있지만 간접 주소 지정은 명시적 연산자나 함수를 호출하는 방식으로 이용해야한다.
     
     ```c
     int * aa, bb;
@@ -31,43 +29,10 @@
 
 - **_Dereferencing_ 역참조 ****
     - 포인터가 가리키고 있는 주소의 값을 가져오는 것
-
     ```c
     int cc;
     cc = *aa;
     ```
-    
-## Pointer and Pointer Problems in PL
-
-### Type Checking
-
-```c
-*a > 10
-```
-
-- 부등호 연산을 하려면 숫자 타입이어야 비교가 가능하다.
-- 하지만 변수 a가 가리키는 것이 수치 타입인 것을 어떻게 보장할 것인가?
-    - 이것은 실행시간에야 알 수 있다
-- **domain type**: 포인터가 가리킬 수 있는 타입
-    - PL/1 의 포인터는 특정한 데이터 타입으로 한정되지 않았다. _not restricted to a single domain type_
-    - C언어는 포인터 변수의 타입을 제한했다.
-        - `int * a` 는 항상 int type만 가리킬 수 있다.
-
-```
-
-### Lost Objects
-
-- 분실 객체
-- 기억공간에 데이터는 저장되어있지만, 참조하고 있는 포인터가 없는 경우 _allocated dynamic object that is no longer accessible to the user program but may still contain useful data_
-- 더 이상 목적대로 쓸 수 없으며, 이 공간은 재사용될 수도 없음
-- 가비지 _garbage_ 라고 부르기도 함.
-
-```c
-char *c;
-c = malloc(...); 여기서 XX0번지 공간 할당
-
-c = malloc(...); 여기서 XX1번지 공간 할당, XX0번지는 접근할 수 없으면서 유지되고 있는 공간
-```
 
 ## Pointers in Pascal
     

@@ -2,7 +2,6 @@
 상위 링크: "[[Dangling Pointer]]"
 ---
 # Tombstone Approach
-
 Dangling Pointer의 문제를 해결하는 방법으로 Tombstone이라고 부르는 특수한 공간을 통해 동적 변수들을 관리하는 방법이다.
 
 Tombstone Approach를 사용하는 시스템에서 모든 포인터는 사용하는 동적변수의 공간을 직접 가리키지 않고, Tombstone의 주소를 가리켜 Tombstone이 저장하고 있는 실제 사용하고 있는 주소로 이중 연결을 통해 접근한다.

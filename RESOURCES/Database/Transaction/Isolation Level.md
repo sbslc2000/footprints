@@ -13,7 +13,8 @@ READ UNCOMMITTED 수준에선 다른 트랜잭션에서 변경하고 아직 커�
 ### READ COMMITTED
 READ COMMITTED 수준에서는 다른 트랜잭션에서 커밋한 데이터만 읽을 수 있다. 하지만 이 수준에서는 **NON-REPEATABLE READ** 문제가 발생한다. 
 
-NON-REPEATABLE READ란 한 트랜잭션에서 A를 조회한 상태에서 다른 트랜잭션이 A를 변경하고 커밋까지 한 경우, 다시 A를 조회할 때에는 수정된 데이터를 읽게 되는 문제를 말한다. 이 경우 반복해서 같은 데이터를 읽
+NON-REPEATABLE READ란 한 트랜잭션에서 A를 조회한 상태에서 다른 트랜잭션이 A를 변경하고 커밋까지 한 경우, 다시 A를 조회할 때에는 수정된 데이터를 읽게 되는 문제를 말한다. 이 경우 반복해서 같은 데이터를 읽는다.
+
 ### REPEATABLE READ
 REAPEATABLE READ 수준에서는 한 번 조회한 데이터는 반복해서 조회해도 같은 데이터가 조회된다. 하지만 **PHANTOM READ** 문제는 발생할 수 있다.
 
