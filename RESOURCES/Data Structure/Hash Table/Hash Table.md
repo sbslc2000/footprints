@@ -13,11 +13,11 @@ Hash Table은 원소가 저장될 자리가 원소의 값에 의해 결정되는
 해시 함수는 데이터로부터 주소를 계산해내는 함수로, 입력 원소가 해시 테이블에 고루 저장되게 하기 위한 목적과 동시에 간단한 계산에 대한 필요를 갖는다.
 
 ### Division Method
-* h(x) = x mod m
+* `h(x) = x mod m`
 * m : 해시 테이블의 사이즈로, 대개 소수이다. 2의 제곱수와 거리가 먼 소수가 효과적이다.
 
 ### Multiplication Method
-* h(x) = (xA mod 1) * m
+* `h(x) = (xA mod 1) * m`
 * A: 0 < A < 1 인 상수이다. m은 굳이 소수일 필요는 없으며, 따라서 보통 $2^p$로 잡는다.\
 
 ## 충돌 Collision
@@ -38,15 +38,20 @@ Hash Table은 원소가 저장될 자리가 원소의 값에 의해 결정되는
 충돌이 일어나도 어떻게든 주어진 테이블 공간에서 해결하는 방법이다. 추가적인 공간을 요구하지 않으며, 빈자리가 생길 때 까지 해시값을 연속해서 만들어낸다.
 
 1. Linear Probing
+
 ![](https://i.imgur.com/tibVxNa.png)
 $h_i(x) = (h(x)+i)\ \ mod\ \ m$ 과 같은 방법으로 N차의 해싱 함수를 만들어낸다. 이 방법은 1차 군집에 취약하다.
 
 2. Quandratic Probing
+
 $h_i(x) = (h(x) + c_1i^2 + c_2i) \ \ mod \ \ m$
+
 2차원 조사는 2차군집에 취약하다.
+
 * 2차군집: 여러개의 원소가 동일한 초기 해쉬 함수값을 갖는 현상
 
 3. Double Hashing
+
 Double Hashing은 N차 해시 함수를 만들 때 전혀 다른 해시함수를 합쳐서 사용하는 방법이다.
 $h_i(x) = (h(x) + if(x)) \ mod \ m$
 ![](https://i.imgur.com/QHCXH7S.png)

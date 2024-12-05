@@ -3,7 +3,7 @@
 ---
 # Packet Switching
 
-Packet Switching은 Circuit Switching과 다르게, 사전에 링크를 수립하지 않는다. 대신 각각의 데이터 전송 단위를 패킷으로 나누고, 해당 패킷을 보내기 위해 각 라우터에서 스위칭 작업을 동적으로 수행한다.
+Packet Switching은 [[Circuit Switching]]과 다르게, 사전에 링크를 수립하지 않는다. 대신 각각의 데이터 전송 단위를 패킷으로 나누고, 해당 패킷을 보내기 위해 각 라우터에서 스위칭 작업을 동적으로 수행한다.
 
 따라서 각각의 라우터는 store and forward 작업을 수행해야한다. 
 1. store : 패킷을 전달받으면 버퍼 공간에 저장해놓는다.
