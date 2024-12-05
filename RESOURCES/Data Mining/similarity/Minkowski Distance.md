@@ -1,7 +1,7 @@
 ---
 상위 링크: "[[Similarity]]"
 ---
-## MInkowski Distance
+	## MInkowski Distance
 
 ![](https://i.imgur.com/xJ7O8Qb.png)
 

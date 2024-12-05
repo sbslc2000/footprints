@@ -6,7 +6,6 @@ Creator Pattern이란 A라는 객체가 만들어질 필요가 있을 때 이것
 
 ## Solution
 Createor 패턴은 다음과 같은 특징을 갖는 클래스에 생성 책임을 부여할 것을 권장한다.
-
 * **A라는 객체를 contain하고 있거나 aggregate 관계에 있을 때**
 * A를 recording하고 있을 때
 * A를 밀접하게 사용할 때

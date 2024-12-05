@@ -3,6 +3,7 @@
 ---
 # Pipe
 ![](https://i.imgur.com/wwLUcPQ.png)
+
 Nest.js의 Pipe는 PipeTransform 인터페이스를 구현한 클래스로, @Injectable() 데코레이터와 함께 사용된다.
 
 Pipe는 두 가지 목적으로 사용된다.
