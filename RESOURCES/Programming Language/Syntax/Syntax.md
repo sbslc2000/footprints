@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[RESOURCES/Programming Language/Programming Language|Programming Language]]"
+상위 링크: "[[Programming Language Theory|Programming Language Theory]]"
 ---
 # Syntax
 Syntax는 표현식, 문장, 프로그램 단위에 대한 형식을 말한다.

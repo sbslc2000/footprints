@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[RESOURCES/Programming Language/Programming Language|Programming Language]]"
+상위 링크: "[[Programming Language Theory|Programming Language Theory]]"
 ---
 > 변수는 속성이나 속성의 모음으로 특정지어질 수 있으며, 그것 중 가장 중요한 것은 type이다. 프로그래밍 언어의 데이터 타입을 설계하기 위해서는 범위, 수명, 타입검사, 초기화 등 다양한 문제를 고려해야한다.
 
