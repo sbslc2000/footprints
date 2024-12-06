@@ -87,7 +87,3 @@ docker exec -it f3392h4g redis-cli
 ```shell
 docker exec -it <컨테이너 아이디> sh | bash | zsh | ...
 ```
-
-## Docker 빌드 관련 명령어
-[[Docker Image Creation]]
-#docker #cli #terminal 

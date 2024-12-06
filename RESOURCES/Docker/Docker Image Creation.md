@@ -1,5 +1,6 @@
 # 도커 이미지 생성
-![[Pasted image 20230921165138.png]]
+
+![](https://i.imgur.com/dfmQ0aI.png)
 
 ## Dockerfile 생성
 Dockerfile이란 도커 이미지를 만들기 위한 설정 파일이며, 컨테이너가 어떻게 행동해야하는지에 대한 설정들을 정의해 주는 곳이다.
