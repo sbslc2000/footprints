@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Test]]"
+상위 링크: "[[Testing]]"
 ---
 # Jacoco
 ![](https://i.imgur.com/GZzok0v.png)

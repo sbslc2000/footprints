@@ -3,14 +3,16 @@
 ---
 # Waterfall Model
 
-### Concept
+## Concept
 Waterfall model은 가장 고전적인 소프트웨어 프로세스의 생애주기를 보여주는 모델이다.
+
 ![](https://i.imgur.com/jYEWE7V.png)
 
-1970년 Winwston W Royce에 의해 정립된 Waterfall model은 소프트웨어 개발이 각각의 단계를 선형적으로 수행한다는 관점으로 바라본다. Waterfall 모델을 통해 수행되는 프로세스에서 각각의 단계는 전(before) 단계가 완전히 종료되며 리뷰와 검증을 거친 뒤 시작된다. 
+1970년 Winwston W Royce에 의해 정립된 폭포수 모델은 소프트웨어 개발이 각각의 단계를 선형적으로 수행한다는 관점으로 바라본다. 폭포수 모델을 통해 수행되는 프로세스에서 각각의 단계는 전(before) 단계가 완전히 종료되며 리뷰와 검증을 거친 뒤 시작된다. 
+
 각각의 관심사를 가진 단계들은 프로젝트의 진척도를 보여주기도 한다. 이 방법은 전형적인 계획-주도적 방법*plan-driven approach*이다.
 
-### Advantages
+## Advantages
 Waterfall Model은 개념적으로 간단하고, 문제들이 각각의 단계에서 뚜렷하게 구분된다. 가장 직관적인 바업이며, 순차적으로 수행되므로 관리자가 개발 프로세스를 관리하기에 쉽다.
 
 ### Usage

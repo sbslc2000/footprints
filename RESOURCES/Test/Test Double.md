@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Test]]"
+상위 링크: "[[Testing]]"
 ---
 # Test Double
 ![](https://i.imgur.com/EDx6d5B.png)
