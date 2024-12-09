@@ -1,3 +1,6 @@
+---
+상위 링크: "[[JPA]]"
+---
 # @Id
 해당 필드를 PK로 지정한다.
 # @GeneratedValue

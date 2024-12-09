@@ -1,3 +1,6 @@
+---
+상위 링크: "[[SQL]]"
+---
 # Data Model Languages
 
 ## Data Definition Language
