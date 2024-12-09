@@ -1,4 +1,8 @@
-JPQL의 동적 쿼리 작성의 어려움을 해결하기 위해 JPA에서 제시하는 기술. 동적인 쿼리를 만들 때에 유용하다.
+---
+상위 링크: "[[JPA]]"
+---
+# JPA Criteria 
+JPA의 동적 쿼리는 만드는 표준 인터페이스이다. 동적인 쿼리를 만들 때에 유용하다.
 
 ```java
 CriteriaBuilder cb = em.getCriteriaBuilder();
