@@ -1,5 +1,4 @@
 # BDP
-
 BDP는 [[Bandwidth]] * [Delay](Latency) Product의 약자로, 한 순간에 전송이 진행중인 비트의 총량을 의미한다. 영문으로는 'the maximun number of bits that could be transit through the pipe at any given instance'.
 
 이는 네트워크 망을 순간 캡처했을 때, 떠다닐 수 있는 최대 비트 수를 의미한다.
