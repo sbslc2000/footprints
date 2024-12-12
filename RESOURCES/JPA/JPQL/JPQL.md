@@ -2,7 +2,7 @@
 상위 링크: "[[JPA]]"
 ---
 ## JPQL
-JPQL은 Java Persistence Query Language의 약자로 SQL과 비슷한 문법을 제공하며, 쿼리를 작성할 때 테이블이 아닌 엔티티 객체를 대상으로 할 수 있게 만든 **객체 지향 쿼리 언어**이다. SQL을 추상화하여 [특정 데이터베이스 SQL](Database%20Dialect)에 의존하지 않는다.
+JPQL은 Java Persistence Query Language의 약자로 SQL과 비슷한 문법을 제공하며, 쿼리를 작성할 때 테이블이 아닌 엔티티 객체를 대상으로 할 수 있게 만든 **객체 지향 쿼리 언어**이다. SQL을 추상화하여 [특정 데이터베이스 SQL](Database%20Dialect.md)에 의존하지 않는다.
  
 ```java
 List<Member> members = em.createQuery(
