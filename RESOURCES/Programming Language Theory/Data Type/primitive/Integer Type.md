@@ -1,9 +1,9 @@
 ---
 상위 링크: "[[Primitive Type]]"
 ---
-# Numeric Type
+# Integer Type
 
-Numeric Type, 정수형 타입은 가장 흔한 원시 데이터 타입이며, 많은 컴퓨터들은 다양한 사이즈의 정수형 타입( byte, word, long word, quadword, ...) 을 지원한다.
+Integer Type, 정수형 타입은 가장 흔한 원시 데이터 타입이며, 많은 컴퓨터들은 다양한 사이즈의 정수형 타입( byte, word, long word, quadword, ...) 을 지원한다.
 
 C나 C++와 같은 언어는 부호가 없는 정수형을 지원하기도 하며, 이는 주로 비트 연산이나 이진 데이터를 다룰 때 사용되기도 한다.
 
