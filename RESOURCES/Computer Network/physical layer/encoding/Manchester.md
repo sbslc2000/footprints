@@ -1,3 +1,6 @@
+---
+상위 링크: "[[Encoding]]"
+---
 # Manchester
 
 ![](https://i.imgur.com/4btffLi.png)

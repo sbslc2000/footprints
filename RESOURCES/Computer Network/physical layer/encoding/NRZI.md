@@ -2,7 +2,6 @@
 상위 링크: "[[Encoding]]"
 ---
 # NRZI
-
 ![](https://i.imgur.com/MShC2tQ.png)
 
 NRZI란 bit가 0이면 현재 신호상태를 유지하며, bit가 1이면 중앙 지점에서 상태를 전이하는 인코딩 방식이다.

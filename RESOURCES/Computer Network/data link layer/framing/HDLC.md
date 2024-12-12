@@ -2,7 +2,6 @@
 상위 링크: "[[Framing]]"
 ---
 # HDLC
-
 HDLS는 High-level Data Link Control의 약자로, 비트 중심 프레이밍 프로토콜이다.
 
 ![](https://i.imgur.com/Uh2v0XC.png)

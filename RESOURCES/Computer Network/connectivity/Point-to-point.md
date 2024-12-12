@@ -2,7 +2,6 @@
 상위 링크: "[[Direct Connectivity]]"
 ---
 # Point-to-point
-
 ![](https://i.imgur.com/DWHDyFn.png)
 
 점대점 연결은 가장 작고 간단한 네트워크 구조로, 하나의 링크로 두 노드가 연결되어있는 형태를 의미한다.
