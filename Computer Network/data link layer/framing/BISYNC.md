@@ -2,7 +2,6 @@
 상위 링크: "[[Framing]]"
 ---
 # BISYNC
-
 ![](https://i.imgur.com/fHwAK0d.png)
 
 BISYNC는 바이트 중심 프레이밍 프로토콜로, **보초성 문자**를 제공하여 비트 묶음에 의미를 부여하는 방법을 사용한다.
