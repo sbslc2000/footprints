@@ -2,7 +2,6 @@
 상위 링크: "[[Database]]"
 ---
 # 정규화
-
 데이터베이스 정규화란 릴레이션의 구조를 중복이 적게 만들면서 데이터를 가져오기 쉬운 좋은 구조로 만드는 과정입니다. 여기서 좋은 구조란 무엇일까요? 어떠한 데이터 구조가 다른 데이터 구조보다 좋다는 기준이 뭘까요? 이것을 측정할 수 있을까요? 선대 개발자들은 이것을 측정가능한 단계로 나누었으며, 이것은 각각의 정규화 단계로 규정되어 왔습니다.
 
 ![](https://i.imgur.com/HzrCVwL.png)
@@ -107,15 +106,11 @@ $R_1 \cap R_2 = \{B\}$
 릴레이션이 정규화된 정도는 정규형_Normal Form, NF_으로 표현합니다. 각 정규형마다 만족시켜야하는 제약조건이 존재합니다. 아래부터는 각 정규형이 만족해야하는 제약조건에 대해 설명합니다.
 
 ## 제 1 정규형
-
 > 릴레이션에 속한 모든 속성의 도메인이 원자값으로만 구성되어있어야 한다.All attributes should have a single value.
-
-
 
 ![](https://i.imgur.com/rx19oLu.png)
 
 ## 제 2 정규형
-
 > 릴레이션이 제 1 정규형에 속하고, PK가 아닌 모든 속성이 PK에 Full Functional Dependency를 가져야한다. All non-PK attributes should be fully functional dependent on the entire PK.
 
 ![](https://i.imgur.com/6DitmZD.png)
@@ -135,8 +130,7 @@ $R_1 \cap R_2 = \{B\}$
 하지만 이 예시는 완전하지는 않아 보입니다. 이러한 예시는 한 과목을 무조건 하나의 지도교수가 가르친다 라는 가정 하에서 완전해 보입니다. 만약 운영체제의 지도교수 박재현이 있었다면 추가적인 분리가 이루어져야 할 것입니다. 우측의 PK인 과목이 지도교수에 대해 FD를 갖지 못할 것이기 때문입니다.
 
 ## 제 3 정규형
-
-> 릴레이션이 제 2 정규형에 속하고, PK가 아닌 모든 속성이 PK에 이행적 함수 종속*Transitive Dependency*이 되지 않아야 한다. All non-PK attributes should not be dependent on other non-PK attributes.
+> 릴레이션이 제 2 정규형에 속하고, PK가 아닌 모든 속성이 PK에 이행적 함수 종속*Transitive Dependency*이 되지 않아야 한다. *All non-PK attributes should not be dependent on other non-PK attributes.*
 
 이행적 함수 종속이란 A→B, B→C 일때, A→C가 성립하는 경우를 의미합니다. 이 문장은 영문을 봤을때 이해하기 훨씬 수월하리라 생각합니다.
 
@@ -159,9 +153,7 @@ PK가 아닌 모든 속성이 PK에 대해 FFD를 가지는 것으로 보입니�
 
 
 ## BCNF 정규형
-
 BCNF 정규형는 정규형의 개념을 정리한 Boyce와 Codd의 이름을 딴 정규형입니다.
-
 > 릴레이션이 제 3 정규형을 만족하고, 릴레이션의 함수 종속 관계에서 모든 결정자가 후보키이면 BCNF 정규형에 속한다. All determinants should be candidate keys.
 
 BCNF 정규형을 만족시키기 위해서는 모든 결정자가 후보키여야 합니다. 이 말은 즉슨 후보키에 존재하지 않는 속성이 결정자가 되어서는 안된다는 뜻입니다.
