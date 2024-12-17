@@ -1,9 +1,10 @@
 ---
 상위 링크: "[[Testing]]"
+공식 링크: https://www.eclemma.org/jacoco/
 ---
 # Jacoco
 ![](https://i.imgur.com/GZzok0v.png)
-[EclEmma - JaCoCo Java Code Coverage Library](https://www.eclemma.org/jacoco/)
+
 JaCoCo는 EclEmma 팀이 만든 무료 Java Code Coverage를 체크하는 라이브러리이다.
 
 ## 설정 방법

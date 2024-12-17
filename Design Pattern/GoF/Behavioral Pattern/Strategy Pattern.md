@@ -4,7 +4,6 @@
 # Strategy Pattern
 
 ## Purpose 
-
 > Strategy pattern defines a family of algorithms, encapsulates each one and make them interchangeable. Strategy pattern lets the algorithms vary independently from clients that use it
 
 전략 패턴은 알고리즘의 군을 정의하고, 각각을 캡슐화하여 상호교체 가능하게 만든다. 전략 패턴을 사용하면 알고리즘을 사용하는 클라이언트에게는 영향을 주지 않으면서 다른 알고리즘을 적용시킬 수 있다.

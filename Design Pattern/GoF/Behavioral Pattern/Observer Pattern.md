@@ -4,7 +4,6 @@
 # Observer Pattern
 
 ## Purpose
-
 > Let one or more objects be notified of state changes in other objects within the system
 
 Observer Pattern은 하나의 객체의 상태가 변경될 때 다른 객체들이 이를 알아차리고 어떠한 액션을 취하게 만들고 싶을 때 사용한다. 
