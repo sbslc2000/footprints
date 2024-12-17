@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[RESOURCES/Design Pattern/GoF/Behavioral Pattern/Behavioral Pattern|Behavioral Pattern]]"
+상위 링크: "[[Behavioral Pattern]]"
 ---
 # Strategy Pattern
 
