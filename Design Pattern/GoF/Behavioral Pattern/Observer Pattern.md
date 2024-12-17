@@ -15,7 +15,6 @@ Observer Pattern은 하나의 객체의 상태가 변경될 때 다른 객체들
 * Observer : 다 측의 객체들로, subject의 상태 변경을 알아차리기를 원하는 객체들이다.
 
 ## Class Diagram
-
 ![](https://i.imgur.com/j8CHXLf.png)
 
 ## Example Source Code

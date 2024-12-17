@@ -11,5 +11,4 @@ Iterator Pattern의 목적은 컬렉션(집합체) *Aggregate Object*의 내부 
 * 서로 다른 컬렉션에 대해 일관된 방식으로 접근하고 싶을 때
 
 ## Class Diagram
-
 ![](https://i.imgur.com/XWXSozr.png)
