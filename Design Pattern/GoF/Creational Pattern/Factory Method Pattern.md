@@ -3,7 +3,6 @@
 ---
 # Factory Method Pattern
 ## Purpose
-
 > Factory Method Pattern exposes a method for creating objects, allowing subclasses to control the actual creation process.
 
 Factory Method Pattern은 **상속**을 사용하여 구체적인 객체 생성 로직을 서브클래스에서 구현하도록 한다.
