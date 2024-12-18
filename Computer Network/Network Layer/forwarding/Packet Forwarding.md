@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Network Layer]]"
+상위 링크: "[[../Network Layer|Network Layer]]"
 ---
 # Packet Forwarding
 ![](https://i.imgur.com/maUOycD.png)
