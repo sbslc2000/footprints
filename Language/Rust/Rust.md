@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[RESOURCES/Language/Programming Language|Programming Language]]"
+상위 링크: "[[../Programming Language|Programming Language]]"
 ---
 # Rust
 ![](https://i.imgur.com/YL13nB5.png)

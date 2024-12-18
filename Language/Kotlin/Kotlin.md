@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[RESOURCES/Language/Programming Language]]"
+상위 개념: "[[../Programming Language|Programming Language]]"
 ---
 # Kotlin
 ```kotlin

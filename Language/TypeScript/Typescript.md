@@ -1,3 +1,6 @@
+---
+상위 링크: "[[../Programming Language|Programming Language]]"
+---
 # Typescript
 ![](https://i.imgur.com/Mc7qhIs.png)
 Typescript는 2012년 MS의 개발자이자 C#의 창시자인 앤더스 하일스버그로부터 탄생했다. 타입스크립트는 오픈소스로 공개되어있어 많은 개발자들이 언어의 개발과 유지보수에 참여하고 있다.
