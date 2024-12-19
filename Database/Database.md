@@ -4,7 +4,6 @@
 # Database란?
 Database는 구조화된 정보 혹은 데이터의 조직화된 모음을 뜻한다.
 
-
 # DBMS
 DBMS, Database Management System은 Database를 관리하는 시스템을 의미하며, 다음과 같은 주요 관심사를 갖는다.
 
