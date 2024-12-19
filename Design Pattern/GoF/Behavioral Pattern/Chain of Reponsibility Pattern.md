@@ -40,7 +40,8 @@
 
 ## Class Diagram
 체인에 속해있는 각각의 객체는 요청을 처리하기 위한 공통 인터페이스를 공유하며, 체인의 후속 처리자에 접근한다. _shares a common interface for handling requests and accessing its successor_
-![](https://i.imgur.com/N5clHWj.png)
+
+![](https://i.imgur.com/6jgLvV6.png)
 
 ## Consequences
 - Benefits
