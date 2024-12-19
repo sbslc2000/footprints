@@ -6,18 +6,18 @@
 ![](https://i.imgur.com/KQhW48V.png)
 
 ## Purpose
-> Gives more than one object an opportunity to handle a request by linking receiving objects together.
+> _Gives more than one object an opportunity to handle a request by linking receiving objects together._
 
-여러 객체를 체인 형태로 연결해 순차적으로 요청을 처리할 수 있도록 한다. 
+- 여러 객체를 체인 형태로 연결해 순차적으로 요청을 처리할 수 있도록 한다.
+- 클라이언트의 요청을 처리할 수 있는 후보가 여러개 있다면
+    - 이를 정적으로 결정하지 말고
+    - 후보들을 체인으로 구성하여
+    - 후보들이 직접 처리하거나 아니라면 다음 후보로 전달하는 방식으로 만들자.
 
 ## Use When
 - 여러 객체가 요청을 처리할 수 있으며, 특정 객체가 처리해야 할 필요는 없을 때
 - 객체의 집합이 요청을 처리할 수 있고, 어떤 객체가 처리할지는 **런타임**에 결정되어야 할 때
 - 요청이 처리되지 않아도 괜찮은 경우
-- 클라이언트의 요청을 처리할 수 있는 후보가 여러개 있다면
-    - 이를 static하게 결정하지 말고
-    - handler들을 chain으로 구성하여
-    - handler들이 직접 처리하거나 forward하는 방식으로 만들자.
 
 ## Concept
 - 각각의 객체는 체인 내에 존재한다.
