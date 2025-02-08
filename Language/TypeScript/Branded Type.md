@@ -61,6 +61,8 @@ class User {
 class UserRepository {
 	public async findById(userId: UserID): Promise<User> {...}
 }
+
+
 ```
 
 User의 식별자에 해당하는 타입을 별도의 UserID라는 이름의 타입으로 작성해주는 것이다. Branded Type은 기본적으로는 기입한 타입처럼 동작한다.  허나 이제 UserID를 파라미터로 요구하는 메서드를 작성할 때는 단순히 string을 넘겨서는 컴파일에 통과하지 않고, \_\_brand 값의 동일성까지 검사하기 때문에, 기존에 발생했던 상황은 컴파일 에러에 잡히게 된다.
@@ -73,3 +75,4 @@ const user = await userRepository.findById(orderId); // compilation error
 ```
 
 ## Java에서는 어떻게 할 수 있을까?
+
