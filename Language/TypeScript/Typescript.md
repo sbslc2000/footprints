@@ -11,8 +11,8 @@ Javascript는 본래 웹브라우저에서 간단한 상호작용을 동작시�
 
 Typescript는 자바스크립트를 더 안전하게 사용할 수 있도록 타입 관련 기능들을 추가한 언어이다. Typescript는 자바스크립트의 기본적인 모든 문법을 포함한다.
 ```typescript
-let a:number = 1; // 변수 a에는 숫자 외의 다른 타입이 들어올 수 없음!
-let b:number = 2;
+let a: number = 1; // 변수 a에는 숫자 외의 다른 타입이 들어올 수 없음!
+let b: number = 2;
 
 console.log(a + b);
 ```

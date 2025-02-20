@@ -74,5 +74,3 @@ const orderId: string = '2' as OrderID;
 const user = await userRepository.findById(orderId); // compilation error
 ```
 
-## Java에서는 어떻게 할 수 있을까?
-

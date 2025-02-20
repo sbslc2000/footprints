@@ -12,8 +12,12 @@ const module = require('../../../../some/very/deep/module')
 
 module-alias는 다음과 같이 import할 수 있게 해준다.
 ```javascript
-require('@src/some/very/deep/module')
+require('@/some/very/deep/module')
 ```
 
+혹은 다음과 같이 특정 의미를 지닌 패키지명에 alias를 부여하여 사용할 수 도 있다.
+```javascript
+require('@util/isEmpty')
+```
 ### 참고 링크
 [module-alias - npm](https://www.npmjs.com/package/module-alias)
