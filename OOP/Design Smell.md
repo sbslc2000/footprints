@@ -2,12 +2,7 @@
 상위 링크: "[[Object-oriented Programming]]"
 ---
 # Design Smell
-
-설계원칙은 왜 필요한가? → 설계 악취
-
-설계 악취란 소프트웨어나 시스템이 잘못 design됐을 때 나타나는 신호, 혹은 그런것을 느끼게 해주는 증상을 의미한다.
-
-Design smells = **various signs and symptoms** of bad design
+설계 악취란 소프트웨어나 시스템이 잘못 설계됐을 때 나타나는 신호, 혹은 그런것을 느끼게 해주는 증상을 의미한다. Code Smell과 유사하게 사용되는 것 같다.
 
 - **Rigidity** : 시스템을 변경하기 어려운 것. 어떤 변경을 하려했더니, 시스템의 다른 부분까지 영향을 미쳐 변경해야하는 것(Change Propagation이 과도하게 일어나는 것)
 - **Fragility** : 설계가 망가지기 쉬운것. 코드가 잘못되기가 쉬운 것. 한 군데를 변경했는데, 이것이 다른 부분이 잘못되는데에 원인이 되는 것.
