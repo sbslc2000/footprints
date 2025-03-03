@@ -5,7 +5,7 @@
 # AJV
 Ajv는 여러 자바스크립트 환경에서 사용되는 라이브러리로, json schema에 대한 복잡한 유효성 검증 로직을 단순화해준다.
 
-```
+```javascript
 const Ajv = require("ajv")
 const ajv = new Ajv()
 

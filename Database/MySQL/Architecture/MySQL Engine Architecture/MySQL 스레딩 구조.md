@@ -2,7 +2,6 @@
 상위 개념: "[[MySQL Engine]]"
 ---
 # MySQL 스레딩 구조
-
 MySQL 서버는 스레드 기반으로 동작하며, 크게 Foreground Thread와 Background Thread로 구분할 수 있다.
 
 ## Foreground Thread
