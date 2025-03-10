@@ -14,7 +14,7 @@
 3. 선점 불가*No Preemption* : 할당된 자원을 강제로 빼앗을 수 없음.
 4. 원형 대기*Circular Wait* : 여러 프로세스가 서로 다음 프로세스가 점유한 자원을 기다려 순환 대기 상태가 발생함.
 
-## 어떻게 해결할까?
+## 해결법
 
 ### Deadlock Prevention
 Deadlock Prevention은 데드락이 발생하는 조건 중 적어도 하나를 만족하지 않게 하는 방법으로 데드락이 발생하지 않게 만드는 방법이다.
@@ -31,3 +31,6 @@ Deadlock Prevention은 데드락이 발생하는 조건 중 적어도 하나를 
 
 하지만 이는 Starvation의 문제를 발생시킨다.
 ### Deadlock Avoidance
+데드락을 예방하는 방법은 여러모로 부작용과 성능하락을 발생시키며, 멀티쓰레딩의 장점을 상쇄시킨다. 이에 대한 방안인 Deadlock Avoidance는, 데드락이 발생할 가능성을 0으로 만들지는 않지만, 알고리즘을 사용해 최대한 회피할 수 있다.
+
+Banker's Algorithm 등이 사용된다.
