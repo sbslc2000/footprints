@@ -4,7 +4,7 @@
 # Composite Pattern
 
 ## Purpose
-> Facilitates the creation of object hierarchies where each object can be treated independently or as a set of nested objects through the same interface
+> *Facilitates the creation of object hierarchies where each object can be treated independently or as a set of nested objects through the same interface*
 
 Composite Pattern의 목적은 객체를 트리 구조로 구성하여, 개별 객체와 복합 객체를 **동일한 방식으로 처리**할 수 있게 함으로써 코드의 일관성과 유연성을 높이는 것이다.
 

@@ -4,7 +4,7 @@
 # Builder Pattern
 
 ## Purpose
-> Allows for the dynamic creation of objects based upon easily interchangeable algorithms
+> *Allows for the dynamic creation of objects based upon easily interchangeable algorithms*
 
 빌더 패턴은 쉽게 교체 가능한 알고리즘을 기반으로 객체를 동적으로 생성할 수 있게 해준다.
 
