@@ -2,10 +2,13 @@
 상위 개념: "[[Data Structure]]"
 ---
 # Graph
-그래프는 정점*Vertex*와 간선*Edge*로 이루어진 데이터 구조이다.
+![](https://i.imgur.com/RlvXtuJ.png)
+
+
+그래프는 정점*Vertex*와 간선*Edge*로 이루어진 데이터 구조이다. 
   
 # Graph의 표현
-## 인접 행렬
+## 인접 행렬 Adjacency Matric
 ![](https://i.imgur.com/E2Ke0vj.png)
 그래프를 N * N 의 행렬로 표현하는 방식이다.
 
@@ -23,11 +26,11 @@
 
 인접행렬은 존재하지 않는 간선에 대해서도 0이라는 데이터를 유지해야 하기 때문에 정점에 비해서 간선의 수가 적다면 비효율적인 자료구조이다. 이 경우 **인접 리스트**를 활용하는 것이 효율적일 수 있다.
 
-## 인접리스트
+## 인접 리스트 Adjacency List
 인접리스트란 그래프를 N개의 연결 리스트로 표현하는 방식이다. i 번째 리스트는 정점 i에 인접한 정점들을 리스트로 연결해 놓는다. 가중치의 경우 Node에 가중치를 저장할 수 있는 공간을 추가로 놓아 관리할 수 있다.
 ![](https://i.imgur.com/kxHN0IH.png)
 ![](https://i.imgur.com/rQ9mJdq.png)
 
-## 인접배열
+## 인접 배열
 인접배열이란 그래프를 N개의 연결배열로 표현한 것이다. i 번째 배열은 정점 i에 인접한 정점들의 집합이다.
 ![](https://i.imgur.com/xcKRdBS.png)
