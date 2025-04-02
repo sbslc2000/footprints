@@ -1,4 +1,7 @@
-* [[JPA]]는 특정한 데이터베이스에 종속 되지 않아야 한다.
+---
+상위 개념: "[[../JPA|JPA]]"
+---
+* JPA는 특정한 데이터베이스에 종속 되지 않아야 한다.
 * 각각의 데이터베이스가 제공하는 SQL 문법과 함수는 조금씩 다름
 	* 가변 문자 : MySQL은 VARCHAR, Oracle은 VARCHAR2
 	* 문자열을 자르는 함수 : SQL 표준은 SUBSTRING(), Oracle은 SUBSTR()
