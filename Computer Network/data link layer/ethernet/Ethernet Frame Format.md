@@ -2,7 +2,7 @@
 상위 링크: "[[Ethernet]]"
 ---
 # Ethernet Frame Format
-![](https://i.imgur.com/YJ8rqCI.png)
+![](https://i.imgur.com/YniQvHW.png)
 
 Preamble은 프레임의 시작을 알리는 보초 역할이다.
 
