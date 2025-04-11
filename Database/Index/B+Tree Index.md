@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Index]]"
+상위 개념: "[[Ordered Index]]"
 ---
 # B+Tree Index
 
