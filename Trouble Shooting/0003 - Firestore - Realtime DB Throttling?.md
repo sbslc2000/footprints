@@ -2,6 +2,3 @@
 ![](https://i.imgur.com/LA8W4bY.png)
 ![](https://i.imgur.com/7HFxSII.png)
 ![](https://i.imgur.com/XXO8Mjb.png)
-
-
-
