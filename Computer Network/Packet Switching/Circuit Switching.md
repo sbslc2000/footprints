@@ -1,10 +1,8 @@
 ---
-상위 링크: "[[Indirect Connectivity]]"
+상위 링크: "[[../Computer Network|Computer Network]]"
 ---
 # Circuit Switching
-
-![](https://i.imgur.com/tzpPEgw.png)
-
+![](https://i.imgur.com/uMsHJmc.png)
 
 Circuit Switching (회선 스위칭) 은 주로 전화망에서 사용되었던 방법이다. 송신자 A가 수신자 D에게 정보를 보내기 위해서는, 중간에 있는 라우터들이 서로간의 통신을 수립할 수 있게 스위치를 조정해주어야 한다.
 

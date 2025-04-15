@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Data Link Layer]]"
+상위 링크: "[[../Data Link Layer]]"
 ---
 # Framing
 

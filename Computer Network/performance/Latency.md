@@ -2,7 +2,6 @@
 상위 링크: "[[Network Performance]]"
 ---
 # Latency
-
 Latency란 한 노드에서 다른 노드로 메시지를 송신하는데에 걸리는 시간을 의미한다. 
 
 ## Latency에 영향을 미치는 요소
