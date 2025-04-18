@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[언어 평가 기준]]"
+상위 링크: "[[Language Evaluation Criteria]]"
 ---
 # 작성력 Writability
 > how easily a language can be used to create programs for a chosen problem domain

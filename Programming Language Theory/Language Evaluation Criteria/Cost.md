@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[언어 평가 기준]]"
+상위 링크: "[[Language Evaluation Criteria]]"
 ---
 # Cost: 비용
 
