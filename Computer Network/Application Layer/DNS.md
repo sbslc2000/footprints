@@ -10,7 +10,7 @@
 
 ## DNS가 제공하는 서비스
 
-### Host Aliasing
+### 호스트 앨리어싱(Host Aliasing)
 복잡한 호스트 이름을 가진 호스트는 하나 이상의 별명을 가질 수 있다. 예를 들어 전세계적으로 서비스를 제공하는 Facebook은 여러 대의 호스트에서 서비스를 제공한다. 허나 이들은 모두 www.facebook.com 이라는 별명을 갖는다.
 ```
 ➜  ~ nslookup www.facebook.com
@@ -26,7 +26,9 @@ www.facebook.com 에 대한 IP 주소 질의를 할 때, DNS 서버는 이에 �
 
 ### Mail Server Aliasing
 
-### Load Distribution
+### 부하 분산(Load Distribution)
+인기 있는 사이트는 여러 종단 시스템에서 수행되며, 각기 다른 IP 주소를 갖는다. DNS 데이터베이스는 이 IP 주소 집합을 가지고 있으며, 사용자의 질의에 집합 전체를 보낸다. 이 과정에서 주소의 순서를 순환식으로 바꾸어 보내고, 클라이언트는 대부분 첫 번째 IP 주소로 HTTP 요청 메시지를 보내므로 트래픽을 분산하는 효과가 난다.
+
 
 ## 동작 원리
 DNS는 분산 데이터베이스가 인터넷에서 어떻게 구현될 수 있는지를 보여주는 훌륭한 사례이기도 하다.
