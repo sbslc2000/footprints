@@ -22,7 +22,7 @@ www.facebook.com	canonical name = star-mini.c10r.facebook.com.
 Name:	star-mini.c10r.facebook.com
 Address: 157.240.215.35
 ```
-www.facebook.com 에 대한 IP 주소 질의를 할 때, DNS 서버는 이에 해당하는 정식 호스트 이름*canonical name*의 IP 주소를 제공한다. 정식 호스트 이름은 DNS 서버마다, 지역마다 달라질 수 있다.
+www.facebook.com 에 대한 IP 주소 질의를 할 때, DNS 서버는 이에 해당하는 정식 호스트 이름(canonical name)의 IP 주소를 제공한다. 정식 호스트 이름은 DNS 서버마다, 지역마다 달라질 수 있다.
 
 ### Mail Server Aliasing
 
