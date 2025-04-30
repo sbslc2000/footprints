@@ -2,7 +2,7 @@
 상위 개념: "[[MySQL Engine]]"
 ---
 # MySQL 스레딩 구조
-MySQL 서버는 스레드 기반으로 동작하며, 크게 Foreground Thread와 Background Thread로 구분할 수 있다.
+MySQL 서버는 스레드 기반으로 동작하며, 크게 포그라운드 스레드(Foreground Thread)와 백그라운드 스레드(Background Thread)로 구분할 수 있다.
 
 ## Foreground Thread
 포그라운드 쓰레드는 최소한 MySQL 서버에 접속된 클라이언트의 수 만큼 존재하며, 주로 각 클라이언트 사용자가 요청하는 쿼리 문장을 처리한다. 포그라운드 쓰레드는 데이터 캐시 영역에서 데이터를 가져오거나, 직접 디스크의 데이터나 인덱스 파일로부터 데이터를 읽어와 작업을 처리할 수 있다.

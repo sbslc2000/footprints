@@ -2,7 +2,7 @@
 상위 개념: "[[Join Operation Processing]]"
 ---
 # Nested-loop Join
-중첩 루프 조인은 중첩 for 문 알고리즘을 통해 조인 연산을 처리한다. 이 때 바깥쪽 중첩문에 해당하는 릴레이션을 외부 릴레이션*outer relation*, 안쪽 반복문에 해당하는 릴레이션을 내부 릴레이션*inner relation*이라고 한다. 
+중첩 루프 조인은 중첩 for 문 알고리즘을 통해 조인 연산을 처리한다. 이 때 바깥쪽 중첩문에 해당하는 릴레이션을 외부 릴레이션(outer relation), 안쪽 반복문에 해당하는 릴레이션을 내부 릴레이션(inner relation)이라고 한다. 
 
 ## 알고리즘
 ```

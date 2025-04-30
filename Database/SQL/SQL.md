@@ -2,7 +2,7 @@
 상위 개념: "[[Database]]"
 ---
 # SQL
-SQL (Structured Query Language)란 관계형 데이터베이스를 관리하고 조작하기 위해 표준화된 프로그래밍 언어이다.
+SQL(Structured Query Language)란 관계형 데이터베이스를 관리하고 조작하기 위해 표준화된 프로그래밍 언어이다.
 
 ## 특징
 
