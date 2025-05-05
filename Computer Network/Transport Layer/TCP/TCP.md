@@ -9,3 +9,6 @@ TCP(Transmission Control Protocol)는 트랜스포트 계층의 프로토콜로,
 * 전이중 서비스(full-duplex service)
 * 신뢰적인 데이터 전송
 * 혼잡도 관리(congestion control)
+
+## 세그먼트 구조
+TCP는 다양한 기능을 제공하는 만큼 헤더의 구성이 복잡하다.
