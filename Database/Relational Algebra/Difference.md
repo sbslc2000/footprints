@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Relational Algebra]]"
+---
 # Difference
 합병이 가능한 두 릴레이션 R과 S의 차집합은 다음과 같이 표현한다.
 $$ R - S $$
