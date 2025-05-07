@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Algolia]]"
+---
 # Relevance
 Algolia Relevance는 query와 일치하는 records를 찾고 이들의 순위를 매기는 것을 의미한다.
 

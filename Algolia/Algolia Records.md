@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Algolia]]"
+---
 # Algolia Records
 알고리아의 레코드는 key - value 쌍을 갖는 속성들의 모음이다.
 
