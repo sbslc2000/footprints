@@ -1,3 +1,6 @@
+---
+상위 개념: "[[JPA]]"
+---
 JPA Data Type은 크게 Entity Type과 Value Type으로 나눌 수 있다.
 
 ## Entity 타입과 Value 타입의 특징 
@@ -17,10 +20,10 @@ Member Entity Type이 있다고 가정하며, 이 엔티티 클래스는 JPA에 
 이러한 차이점 (추적 가능, 생명주기)는 이후에 나올 개념들을 익히기 위해 필요한 개념들이다.
 
 # 분류 
-Value Type은 다음과 같은 분류로 나누니다.
-* **기본값 타입***Basic Value Type*
-* **임베디드 타입***Embedded Type*, 복합 값 타입
-* **컬렉션 값 타입***Collection Value Type*
+Value Type은 다음과 같은 분류로 나뉜다.
+* 기본값 타입(Basic Value Type)
+* 임베디드 타입(Embedded Type)
+* 컬렉션 값 타입(Collection Value Type)
 
 ## 기본 값 타입
 String, Integer, int 와 같은 타입들을 기본 값 타입이라고 하며, 이들의 생명주기는 **엔티티에 의존**한다. 

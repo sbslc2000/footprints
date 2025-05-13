@@ -1,3 +1,6 @@
+---
+상위 개념: "[[JPA]]"
+---
 ```java
 @Entity
 public class Member {
