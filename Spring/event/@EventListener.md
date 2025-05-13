@@ -33,7 +33,7 @@ public class MyEvent {
 @Service  
 @RequiredArgsConstructor  
 public class EventPublishingService {  
-  
+
     private final ApplicationEventPublisher publisher;  
   
     public void publishEvent(String message) {  
