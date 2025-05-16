@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[../OSI/OSI 7 Layers|OSI 7 Layers]]"
+상위 개념: "[[../terminologies/OSI/OSI 7 Layers|OSI 7 Layers]]"
 ---
 # Transport Layer
 트랜스포트 계층은 각기 다른 호스트에서 동작하는 애플리케이션 프로세스 간의 논리적 통신을 제공한다.

@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[../OSI/OSI 7 Layers]]"
+상위 링크: "[[../terminologies/OSI/OSI 7 Layers]]"
 ---
 # Physical Layer
 Physical Layer는 OSI 7 계층의 최하위 계층으로서 물리적인 전송매체를 통하여 상위 계층인 데이터 계층으로부터 전달된 데이터 비트 묶음을 상대측 Physical Layer로 전달하는 기능을 수행한다.
