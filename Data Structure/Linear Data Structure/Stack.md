@@ -2,7 +2,7 @@
 상위 개념: "[[../Data Structure|Data Structure]]"
 ---
 # Stack
-스택*Stack*이란, **후입 선출***LIFO, Last-In-First-Out* 방식으로 동작하는 선형 자료구조이다. 가장 최근에 추가된 데이터가 가장 먼저 제거되는 구조를 가진다.
+스택*Stack*이란, **후입 선출**(LIFO, Last-In-First-Out) 방식으로 동작하는 선형 자료구조이다. 가장 최근에 추가된 데이터가 가장 먼저 제거되는 구조를 가진다.
 
 ## 주요 연산
 * push : 데이터를 스택에 추가한다.

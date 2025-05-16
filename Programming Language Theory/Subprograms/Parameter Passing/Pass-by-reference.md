@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Parameter Passing Methods]]"
+상위 링크: "[[Parameter Passing/Parameter Passing Methods]]"
 ---
 # Pass-by-reference
 Pass-by-reference는 In-out Mode에 해당하는 파라미터 전달 방식이다.

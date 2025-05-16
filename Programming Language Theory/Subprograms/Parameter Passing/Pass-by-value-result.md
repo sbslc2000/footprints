@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Parameter Passing Methods]]"
+상위 링크: "[[Parameter Passing/Parameter Passing Methods]]"
 ---
 # Pass-by-value-result
 Pass-by-value-result는 In-out Mode 모델에 해당하는 파라미터 전달 방식이며, Pass-by-value와 Pass-by-result가 혼합된 방식이다.

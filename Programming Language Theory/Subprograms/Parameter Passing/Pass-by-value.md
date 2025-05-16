@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Parameter Passing Methods]]"
+상위 링크: "[[Parameter Passing/Parameter Passing Methods]]"
 ---
 # Call-by-value
 Call-by-value는 In Mode 모델의 파라미터 전달 방식으로, 실 매개변수의 값이 형식 매개변수의 값을 초기화하는 방식으로 동작한다. 아래 코드로 예를 들자면, myPrint()로 전달된 a의 값이 호출된 서브프로그램에서 형식 매개변수인 f의 초기값으로 사용된다. 이후 f는 서브프로그램의 지역변수처럼 동작한다.
