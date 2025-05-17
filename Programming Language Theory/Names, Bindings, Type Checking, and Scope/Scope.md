@@ -22,9 +22,4 @@ void func(int c) {
 ## Static Scoping
 
 ## Dynamic Scoping
-
-
-
->[!info]
->hello
 >
