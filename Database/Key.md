@@ -13,7 +13,7 @@
 ### Key
 > Attribute ( or attributes combination) that can uniquely identify every single tuples in a relation schema 
 
-후보키*Candidate Key*라고도 불리며, 튜플을 찾거나 정렬할 때 다른 튜플과 구별할 수 있는 기준이 될 수 있는 속성들을 의미한다. 이는 유일성의 특성에 더하여 최소성을 만족시켜야 한다.
+후보키(Candidate Key)라고도 불리며, 튜플을 찾거나 정렬할 때 다른 튜플과 구별할 수 있는 기준이 될 수 있는 속성들을 의미한다. 이는 유일성의 특성에 더하여 최소성을 만족시켜야 한다.
 
 ### Primary Key
 > Chosen Key from candidate keys

@@ -7,7 +7,7 @@ Javadoc은 JDK와 함께 패키지로 제공되는 도구이다. JDK가 설치�
 
 ![](https://i.imgur.com/X3HNXix.png)
 
-## Javacod 사용 방법
+## Javadoc 사용 방법
 cmd 창을 열고 java 파일이 있는 디렉토리로 이동한 후 javadoc -d doc \*.java 로 생성할 수 있다.
 
 ## Javadoc의 대상이 되는 주석 작성방법
