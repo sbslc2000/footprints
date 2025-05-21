@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[../../../WEB/HTTP/HTTP|HTTP]]"
+상위 개념: "[[HTTP]]"
 ---
 # Non-persistence HTTP
 비지속 연결 HTTP는 각각의 웹 객체들의 요청에 대해 하나의 TCP 연결을 사용하는 구조를 말한다. HTTP/1.0은 비지속 연결을 지원한다.
