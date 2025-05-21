@@ -1,7 +1,7 @@
 ---
 상위 개념: "[[Lock]]"
 ---
-# 2 Phase Locking Protocol
+# 2-Phase Locking Protocol
 
 ![](https://i.imgur.com/eDHG6pN.png)
 
