@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Schedule]]"
+상위 개념: "[[../Schedule/Schedule]]"
 ---
 # Cascadeless Schedule
 
@@ -14,4 +14,4 @@
 
 연쇄적 롤백은 상당히 많은 양의 작업을 취소시키기 때문에 바람직하지 않다. 따라서 연쇄적 롤백이 발생하지 않도록 스케줄에 제한을 주어야 하며, 이러한 스케줄을 **비연쇄적인 스케줄**(cascadeless schedule)이라고 한다.
 
-모든 비연쇄적인 스케줄은 [복구 가능](Recoverable%20Schedule)하다.
+모든 비연쇄적인 스케줄은 [복구 가능](../Schedule/Recoverable%20Schedule.md)하다.

@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Transaction Isolation|Transaction Isolation]]"
+상위 개념: "[[../Transaction|Transaction]]"
 ---
 # Schedule
 스케쥴이란 동시 트랜잭션의 명령이 실행되는 시간 순서를 지정하는 명령의 시퀀스이다. 스케줄은 시스템에서 실행 중인 트랜잭션들이 어떤 순서에 따라 실행되는지를 보여준다.

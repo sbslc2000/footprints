@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Schedule]]"
+상위 개념: "[[../Schedule/Schedule]]"
 ---
 # Recoverable Schedule
 ![](https://i.imgur.com/w9khvyW.png)
