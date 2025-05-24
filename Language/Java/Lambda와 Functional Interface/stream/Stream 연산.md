@@ -61,7 +61,7 @@ IntStream.range(0,10)
 	.takeWhile(i -> i < 4) // 0, 1, 2, 3
 ```
 
-### dropWhilte
+### dropWhile
 dropWhile은 해당 조건문을 만족하는 동안만 요소를 무시한 뒤, 나머지 요소들을 다음 스트림에 넘긴다.
 ```java
 IntStream.range(0,10)
