@@ -5,7 +5,7 @@
 
 > The Result is determined without evaluating all of the operands and/or operators
 
-단락 평가 *Short-Circuit Evaluation* 이란, 식의 일부분만을 가지고 식의 전체를 평가할 수 있는 것을 의미한다. 
+단락 평가(Short-Circuit Evaluation)란, 식의 일부분만을 가지고 식의 전체를 평가할 수 있는 것을 의미한다. 
 다음과 같은 if문이 있다고 가정해보자
 ```
 if a == b or b == c {
