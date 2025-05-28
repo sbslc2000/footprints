@@ -4,9 +4,9 @@
 # Equality comparisons and sameness
 Javascript는 다음 세 가지 값 비교 연산을 제공한다.
 
-* `===` :  Strict Equality
-* `==` : Loose Equality
-* `Object.is()`
+* === : Strict Equality
+* == : Loose Equality
+* Object.is()
 
 이들의 차이는 비교에 있어서 유형 변환 혹은 특수 처리가 발생하는지에 관련되어있다.
 
