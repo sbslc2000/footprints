@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Internetworking Protocol]]"
+상위 링크: "[[IP]]"
 ---
 # IP Address
 IP 주소는 IP Layer에서 노드를 구별하기 위한 식별자로, 32-bit으로 구성되어있다. 

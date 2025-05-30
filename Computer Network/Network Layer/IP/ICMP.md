@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Internetworking Protocol]]"
+상위 링크: "[[IP]]"
 ---
 # Internet Control Message Protocol
 ![](https://i.imgur.com/7AgvTdg.png)

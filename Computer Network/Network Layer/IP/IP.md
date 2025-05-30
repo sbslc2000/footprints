@@ -2,7 +2,7 @@
 상위 링크: "[[Computer Network]]"
 ---
 # IP
-IP는 서로 다른 네트워크끼리 통신할 수 있도록 네트워크 계층 위에서 표준화된 프로토콜이다.
+IP(Internetworking Protocol)는 서로 다른 네트워크끼리 통신할 수 있도록 네트워크 계층 위에서 표준화된 프로토콜이다.
 
 ![](https://i.imgur.com/JG5jFI4.png)
 

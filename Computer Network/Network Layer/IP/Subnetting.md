@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Internetworking Protocol]]"
+상위 링크: "[[IP]]"
 ---
 # Subnetting
 

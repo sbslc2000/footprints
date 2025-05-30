@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Internetworking Protocol]]"
+상위 링크: "[[IP]]"
 ---
 # 차세대 IP, IPv6
 IPv6은 IPv4의 주소 부족 문제에 기인하여 개발되었다.
