@@ -7,11 +7,11 @@
 
 소프트웨어 V&V (Verification & Validation) 은 소프트웨어 생명 주기 전반에 걸쳐 다음 내용들을 보장하기 위해 수행되는 과정이다.
 
-* 검증 *Verification* 
+* 검증(Verification)
 	* 개발 프로세스의 각 단계가 올바르게 수행되었는지 확인
 	* 제품을 올바르게 만들고 있는가? *Do things right?*
 	* 주로 Inspections과 Reviews로 수행한다.
-* 확인 *Validation*
+* 확인(Validation)
 	* 각 단계에서 생성된 산출물이 이전 단계에서 정의된 요구사항을 충족하는지 확인
 	* 올바른 제품을 만들고 있는가? *Do right things?*
 	* 주로 테스팅을 통해 수행한다.
