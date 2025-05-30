@@ -1,5 +1,6 @@
 ---
 공식 링크: https://mqtt.org/
+상위 개념: "[[../Application Layer/Application Layer|Application Layer]]"
 ---
 # MQTT
 MQTT란 machine-to-machine 통신에 사용되는 메시징 프로토콜이다. 이는 경량으로 설계되었는데,  IoT와 같이 리소스 제약이 있는 상황에서의 데이터 전수송을 목적으로 설계되었기 때문이다. MQTT의 컨트롤 메시지는 2 byte 정도이며, 작업 시 아주 적은 전력만을 필요로 한다.
