@@ -28,9 +28,4 @@ DHCP 발견 메시지를 받은 DHCP 서버는 **DHCP 제공 메시지**(DHCP Of
 이후 DHCP 서버는 DHCP 요청 메시지를 받는다면 **DHCP ACK**을 응답함으로써 구성을 마친다.
 
 
-## DHCP Relay
-![](https://i.imgur.com/a4Zd2wx.png)
-
-DHCP 서버가 항상 인접한 공유기나 라우터에 있을 필요는 없다.  이 방법을 통해 더 적은 DHCP 서버들이 IP 주소 풀을 통합하여 관리함으로써 주소 관리를 용이하게 할 수 있다.
-
 
