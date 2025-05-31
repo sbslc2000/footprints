@@ -6,9 +6,9 @@
 
 사내에 분리된 인트라넷이 필요하지만, 이를 위해 물리적 링크를 구축하기에 너무 큰 비용이 들 때, 전용선 대신 공용 네트워크를 사용하고 그 위에 가상 네트워크를 구축하여 사용할 수 있다. 
 
-위와 같이 논리적으로 구축된 네트워크를 VPN이라고 하며, 이는 Virtual Network의 대표적인 예시이다. VN을 구현하기 위해서 IP Tunneling 기법을 사용할 수 있다.
+위와 같이 논리적으로 구축된 네트워크를 VPN이라고 하며, 이는 Virtual Network의 대표적인 예시이다. VN을 구현하기 위해서 Tunneling 기법을 사용할 수 있다.
 
-## IP Tunneling
+## Tunneling
 ![](https://i.imgur.com/Ih0wade.png)
 
 Network 1과 Network 2를 사설 네트워크로 만들고자 할 때, 이들간의 물리적 링크를 놓는 방법이 아닌 공용 인터넷 망을 사용하게 만들기 위해서는 IP Tunneling이라는 기법을 사용할 수 있다.
