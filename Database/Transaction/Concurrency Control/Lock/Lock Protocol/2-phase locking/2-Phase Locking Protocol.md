@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Lock]]"
+상위 개념: "[[Lock Protocol/Lock Protocol]]"
 ---
 # 2-Phase Locking Protocol
 

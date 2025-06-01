@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[2-Phase Locking Protocol]]"
+상위 개념: "[[Lock Protocol/2-phase locking/2-Phase Locking Protocol]]"
 ---
 # Strict 2-phase Locking
 엄격한 2단계 잠금 규약(Strict 2-phase Locking)은 잠금을 2단계로 수행할 뿐만 아니라, 트랜잭션이 정상적으로 커밋할 때까지 자신이 가진 독점적 잠금을 계속 유지하도록 한다.
