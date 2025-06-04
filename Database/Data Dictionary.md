@@ -3,7 +3,7 @@
 ---
 # Data Dictionary
 ![](https://i.imgur.com/2QVs0tt.png)
-데이터 사전*Data Dictionary, a.k.a. System Catalog*이란 DBMS에서 릴레이션 스키마에 대한 메타 데이터 저장소이다. 
+데이터 사전(Data Dictionary, a.k.a. System Catalog)이란 DBMS에서 릴레이션 스키마에 대한 메타 데이터 저장소이다. 
 
 일부 데이터베이스 시스템은 메타데이터를 특수 목적을 가진 자료 구조와 코드를 사용해 저장한다. 허나 일반적으로 데이터베이스 내의 릴레이션에 메타데이터를 저장하는 것을 선호하는 경향이 있다.
 

@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[SQL]]"
+상위 링크: "[[Relational Languages/SQL/SQL]]"
 ---
 # Data Model Languages
 
