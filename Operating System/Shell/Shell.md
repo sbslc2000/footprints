@@ -1,3 +1,6 @@
+---
+상위 개념: "[[../../Operating System/Operating System|Operating System]]"
+---
 # Shell
 운영체제에서 커널과 이용자 사이에서 이용자의 명령을 해석하고 그 처리 결과를 반환하는 시스템 프로그램이다.
 
