@@ -1,5 +1,6 @@
 ---
-상위 링크: "[[Bridge Pattern]]"
+상위 링크: "[[Structural Pattern]]"
+"":
 ---
 # Bridge Pattern
 ## Purpose
