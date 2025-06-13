@@ -11,9 +11,9 @@ JPA를 구현한 구현체에는 [[Hibernate]], EclipseLink, DataNucleus가 있�
 ## JPA에서 제공하는 기능
 JPA는 Object와 Relational Model의 패러다임 차이를 중간에서 해소하기 위해 사용됩니다. 따라서 JPA는 Relational Model의 개념들을 OOP로 끌고오는 주요 기능들을 갖고 있습니다.
 흔히 ERD라고 불리는, Entity-Relation Diagram은 데이터베이스 모델을 추상화하여 표현하는 다이어그램입니다. 데이터 모델은 Entity와 Relation으로 추상화되며, JPA에서도 이 Entity와 Relation을 Object로 변환하는 기능을 제공합니다.
-[[Entity Mapping]]에서는 JPA가 어떻게 데이터베이스 개체들을 Object와 매핑시키는지에 대해 설명합니다.
-[[Primary Key Mapping]]에서는 Entity Mapping 중에서도 특히 Primary Key의 매핑을 중심적으로하여 설명합니다.
-[[Relational Mapping]]에서는 데이터베이스 테이블간 Relation에 대해 어떻게 Object 레벨에서 매핑시키는지에 대해 설명합니다.
+[[Relational Mapping/Entity Mapping]]에서는 JPA가 어떻게 데이터베이스 개체들을 Object와 매핑시키는지에 대해 설명합니다.
+[[Relational Mapping/Primary Key Mapping]]에서는 Entity Mapping 중에서도 특히 Primary Key의 매핑을 중심적으로하여 설명합니다.
+[[Relational Mapping/Relational Mapping]]에서는 데이터베이스 테이블간 Relation에 대해 어떻게 Object 레벨에서 매핑시키는지에 대해 설명합니다.
 
 ## JPA에서 지원하는 쿼리 방법
 * [[JPQL]]
@@ -28,10 +28,10 @@ JPA는 Object와 Relational Model의 패러다임 차이를 중간에서 해소�
 # 하위문서
 [[영속성 전이 + 고아 객체 => 생명주기]]
 
-[[JPA 프록시 매커니즘]]
+[[Persistence Context/JPA 프록시 매커니즘]]
 [[Persistence Context]]
 [[EntityManagerFactory]]
-[[JPA Value Type]]
+[[Relational Mapping/JPA Value Type]]
 
 ### 함께  보기
 [[JPA 로깅]]

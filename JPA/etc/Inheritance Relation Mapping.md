@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Entity Mapping]]"
+상위 링크: "[[../Relational Mapping/Entity Mapping]]"
 ---
 # Inheritance Relation Mapping
 

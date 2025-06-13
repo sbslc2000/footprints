@@ -286,64 +286,6 @@ ExampleMatcher.matching()
 * 프로퍼티 그룹에 대한 제약조건을 만들지 못한다.
 * 범위 값 조회를 하지 못한다.
 
-## Auditing
-엔티티의 변화가 나타났을 때, 이것이 언제 누구로부터 변경됐는지 기록하는 방법
-
-```java
-public class Comment {
-
-	@CreatedAt
-	private Date createdAt;
-
-	@CreatedBy
-	@ManyToOne
-	private Account createdBy;
-
-	@LastModifiedDate
-	private Date createdAt;
-
-	@LastModifiedBy
-	@ManyToOne
-	private Account createdBy;
-}
-```
-
-Auditing을 사용하기 위해서는 애노테이션을 작성해주어야 한다.
-
-```java
-@SpringBootApplication
-@EnableJpaAuditing
-public class Application {
-...
-}
-```
-
-Entity에는 AuditingListener를 설정해주어야 한다.
-```java
-@Entity
-@EntityListeners(AuditingEntityListener.class)
-public class Comment { ... }
-```
-
-이제 Date는 알아서 갱신된다. 하지만 Account는 어떻게 업데이트시켜야 할까?
-Spring Security를 사용하면 AuditAware라는 인터페이스를 구현하여 수정,생성 시의 사용자를 반환하게 만들 수 있다.
-```java
-public class AccountAuditAware implements AuditorAware<Account> {
-	@Override
-	public Optional<Account> getCurrentAuditor() {
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-		return (MyUserDetails) authentication.getPrincipal().getUser();
-	}
-}
-```
-
-이 경우 등록된 빈의 이름을 설정에서 제공해주어야 한다.
-```java
-@SpringBootApplication
-@EnableJpaAuditing(autidotorAwareRef = "accountAuditAware")
-```
-
 
 ### Jpa의 Lifecycle Event를 사용하는 방법
 Jpa 엔티티의 lifecycle 간에는 이벤트가 발생하여 콜백 메서드를 수행시킬 수 있다.

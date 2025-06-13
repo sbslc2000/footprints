@@ -104,6 +104,6 @@ select t from Team t join fetch t.members join fetch t.XXX
 
 물론 엔티티 fetch join의 경우 페이징을 사용 가능하다. (데이터 뻥튀기가 안일어나기 때문에). Hibernate의 경우 경고 로그를 남기고 메모리로 다 끌고 온 뒤 애플리케이션 레벨에서 페이징을 수행하긴 하지만, 무결성에 있어서 위험하므로 사용하지 않는 것이 좋다.
 
-[[XXToMany 관계에서 페이징 사용하기]]
+[[../N + 1 Problem/XXToMany 관계에서 페이징 사용하기]]
 
 이를 해결하려면 방향을 뒤집어서 엔티티 fetch join으로 만들고 페이징을 수행하거나, join문 자체를 명시하지 않을 수 있다. 이 경우 fetch join이 수행되지 않으므로 lazy loading에 의하여 쿼리문이 페이징 개수만큼 추가될 것이다. 이 때, @BatchSize 애노테이션을 컬렉션 매핑 측에 설정을 해준다면, lazy loading을 할 때 bulk 연산을 수행하게 되므로 쿼리의 수를 줄일 수 있다.
