@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[TCP]]"
+상위 개념: "[[TCP Reliable Transmission]]"
 ---
 # Fast Retransmission
 세그먼트가 전송 중 분실되었을 때, 타임아웃 주기가 길다면 송신자는 오랜 기간동안 대기해야하며 이는 종단 간 지연을 증가시킬 수 있다. 이를 대비하기 위해 TCP는 Fast Retransmission을 수행할 수 있다.
