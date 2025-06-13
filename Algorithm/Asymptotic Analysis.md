@@ -70,7 +70,9 @@ $\theta(f(n))$은 점근적 증가율이 $f(n)$과 일치하는 모든 함수의
 	- g(n) 보다 빠른 비율로 증가하는 함수
 	- o(g(n))과 대칭적
 - Formal Definition
-![](https://i.imgur.com/dqQANiU.png)
+$$ 
+\omega(g(n)) = \{ f(n) | \lim_{n \to \infty} \frac{f(n)}{g(n)} = 0 \}
+$$
 - 직관적 의미
     - f(n) = $\omega(g(n))$ ⇒ f 는 g보다 빠르게 증가한다.
 
