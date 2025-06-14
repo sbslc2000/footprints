@@ -19,40 +19,22 @@ TCP는 직간접적으로 위 요소를 모두 사용하여 혼잡 제어를 수
 
 전송한 여러 세그먼트들이 모두 손실되는 경우, Timeout이 발생한다. 이는 네트워크가 매우 혼잡함을 의미한다. 이런 상황에서는 적극적으로 전송 속도를 줄일 필요가 있다.
 
-3개의 중복된 ACK은 세그먼트들 중 하나의 패킷이 손실된 경우이다. TCP는 [Cumulative ACK](../../../reliable%20transmission/Cumulative%20ACK.md)을 사용하므로, 전송 세그먼트 [A, B, C, D, E, F]에서 D가 손실되는 경우 송신자가 받게되는 ACK은 [B, C, D, D, D, D]가 된다. 이렇게 3개의 중복 ACK이 발생하는 경우는 Timeout보다는 네트워크 혼잡도가 적다는 것을 시사하므로, 비교적 소극적으로 전송 속도를 줄일 필요가 있다.
+3개의 중복된 ACK은 세그먼트들 중 하나의 패킷이 손실된 경우이다. TCP는 [Cumulative ACK](../../../reliable%20transmission/Cumulative%20ACK.md)을 사용하므로, 전송 세그먼트 \[A, B, C, D, E, F]에서 D가 손실되는 경우 송신자가 받게되는 ACK은 \[B, C, D, D, D, D]가 된다. 이렇게 3개의 중복 ACK이 발생하는 경우는 Timeout보다는 네트워크 혼잡도가 적다는 것을 시사하므로, 비교적 소극적으로 전송 속도를 줄일 필요가 있다.
 
 ### 어떻게 전송 속도를 조절하는가?
-TCP에는 전송 속도 조절을 위한 cwnd 변수를 유지한다. cwnd는 Congestion Window의 약자로, ACK을 받지 않은 상태에서 최대로 보낼 수 있는 바이트의 수(윈도우 사이즈) 값을 갖는다. cwnd의 크기가 자연스레 전송 속도를 결정한다.
+TCP에는 전송 속도 조절을 위한 cwnd 헤더를 유지한다. cwnd는 Congestion Window의 약자로, ACK을 받지 않은 상태에서 최대로 보낼 수 있는 바이트의 수(윈도우 사이즈) 값을 갖는다. cwnd의 크기가 자연스레 전송 속도를 결정한다.
 
-* 송신자는 cwnd 변수 유지
-	* 'ACK을 받지 않은 상태에서 최대로 보낼 수 있는 바이트의 수'
-
-[ A B C D E F G H I J K L M N O P]
+ACK은 cwnd를 변경하는 트리거로 사용된다. ACK이 도착했다는 것은 네트워크가 혼잡하지 않다는 증거이므로, 링크의 가용률을 높이기 위해 cwnd를 증가시킨다. ACK이 도착하는 속도는 RTT와 관련이 있고, RTT는 큐잉 딜레이의 영향을 받는다. 큐잉 딜레이가 작은 상황은 네트워크가 혼잡하지 않은 상황이고, 더 작은 RTT를 갖기에, 더 자주 ACK을 받게되고, 따라서 cwnd는 빠르게 늘어난다. 한편 큐잉 딜레이가 긴 상황은 네트워크가 혼잡하다는 것을 의미하며, 더 긴 RTT를 갖게 되고, 따라서 덜 자주 ACK을 받게되므로 cwnd는 느리게 증가한다. 이렇게 ACK을 cwnd의 트리거로 사용하는 방식을 자체 클로킹(self-clocking)이라고 한다.
 
 더 자세한 매커니즘은 아래 TCP Congestion Control과 TCP의 혼잡 제어 상태들을 알아봄으로써 이해할 수 있다.
 
 ## TCP Congestion Control States
 ### Slow Start
-TCP 연결이 수립되고 나면 TCP는 슬로우 스타트(Slow Start) 상태에 돌입한다.
+TCP 연결이 수립되고 나면 TCPsms 슬로우 스타트(Slow Start) 상태에 돌입한다.
 
 ![](https://i.imgur.com/ZRXUPtW.png)
 
 슬로우 스타트는 cwnd의 초기값으로 1 MSS(Maximum Segment Size)로 설정하여, 하나의 ACK이 도착할 때마다 cwnd를 1 MSS 씩 증가시키는 상태이다.
-A = 1MSS짜리 바이트 스트림 , B도 마찬가지, C도 마찬ㄱ지
-
-cwnd = 1;
-... 1 rtt
-cwnd = 2;
-... 1 rtt;
-cwnd = 4;
-... 1 rtt;
-cwnd = 8;
-=> ssthresh = 4
-=> slow start mode
-[  A  B C  D E F G / H I J K L M N O P /]
-
-slow start mode (ssthresh 변수보다 cwnd 작을 때) 
-* 선형적
 
 전송하고자 하는 데이터가 충분히 크다고 가정해보자. 최초의 cwnd는 1이고, 하나의 세그먼트를 전송한다. 이후 RTT의 시간이 지나고 나면, ACK이 도착할 것이고 cwnd는 2로 증가되어 2개의 세그먼트를 전송할 수 있다. 그 다음 RTT에는 2개의 ACK이 도착할 것이므로 cwnd는 4가 될 것이다. 슬로우 스타트에서는 RTT마다 윈도우 사이즈가 2배가 되어 지수적으로 증가한다.
 
@@ -82,4 +64,4 @@ TCP 리노의 문제는 패킷 손실 이후 cwnd가 선형적으로 증가하�
 TCP 큐빅은 리눅스 운영체제에서 사용되는 TCP의 기본 버전이기도 하다.
 
 
-ACK은 cwnd를 변경하는 트리거로 사용된다. ACK이 도착했다는 것은 네트워크가 혼잡하지 않다는 증거이므로, 링크의 가용률을 높이기 위해 cwnd를 증가시킨다. ACK이 도착하는 속도는 RTT와 관련이 있고, RTT는 큐잉 딜레이의 영향을 받는다. 큐잉 딜레이가 작은 상황은 네트워크가 혼잡하지 않은 상황이고, 더 작은 RTT를 갖기에, 더 자주 ACK을 받게되고, 따라서 cwnd는 빠르게 늘어난다. 한편 큐잉 딜레이가 긴 상황은 네트워크가 혼잡하다는 것을 의미하며, 더 긴 RTT를 갖게 되고, 따라서 덜 자주 ACK을 받게되므로 cwnd는 느리게 증가한다. 이렇게 ACK을 cwnd의 트리거로 사용하는 방식을 자체 클로킹(self-clocking)이라고 한다.
+
