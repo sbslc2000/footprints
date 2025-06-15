@@ -1,6 +1,6 @@
 ---
-상위 링크: "[[Packet Forwarding]]"
-"":
+상위 링크: "[[Forwarding]]"
+"": 
 ---
 # Source Routing
 ![](https://i.imgur.com/Jo9QIB1.png)

@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Packet Forwarding]]"
+상위 링크: "[[Forwarding]]"
 ---
 # Virtual Circuit
 ![](https://i.imgur.com/SKSNnMW.png)
