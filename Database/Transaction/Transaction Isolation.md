@@ -20,4 +20,4 @@
 
 
 
-격리성을 완벽하게 보장하려면 트랜잭션을 순차적으로(serially) 실행해야 하는데, 이 경우 동시성 처리 성능이 매우 나빠진다. 이러한 문제로 인해 ANSI에서는 [트랜잭션의 격리 수준](Concurrency%20Control/Isolation%20Level.md)을 4단계로 나누어 정의한다.
+격리성을 완벽하게 보장하려면 트랜잭션을 순차적으로(serially) 실행해야 하는데, 이 경우 동시성 처리 성능이 매우 나빠진다. 이러한 문제로 인해 ANSI에서는 [트랜잭션의 격리 수준](Concurrency%20Control/Isolation%20Level/Isolation%20Level.md)을 4단계로 나누어 정의한다.
