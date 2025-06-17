@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[../Network Layer|Network Layer]]"
+상위 개념: "[[Routing]]"
 ---
 # Routing Algorithm
 라우팅 알고리즘이란 송신자부터 수신자까지 라우터의 네트워크를 통과하는 좋은 경로를 결정하는 알고리즘을 의미한다. 
@@ -13,3 +13,5 @@
 
 ## Static and Dynamic Routing Algorithm
 **정적 라우팅 알고리즘**(Static Routing Algorithm)에서 경로는 사람이 개입할 때에 변한다.(예를 들면, 사람이 직접 링크 비용을 수정하는 경우). 반면 **동적 라우팅 알고리즘**(dynamic routing algorithm)은 네트워크 트래픽 부하나 토폴로지 변화에 따라 라우팅 경로를 바꾼다.
+
+동적 라우팅 알고리즘은 네트워크 변화에 빠르게 대응한다는 장점이 있지만, 경로의 루프나 [경로 진동](Oscillation%20Problem.md) 같은 문제에 취약하기도 하다.

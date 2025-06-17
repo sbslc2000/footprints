@@ -2,12 +2,12 @@
 상위 개념: "[[Routing Algorithm]]"
 ---
 # Link State Algorithm
-링크 상태 알고리즘(Link State Algorithm, LS)은 중앙 집중형 라우팅 알고리즘이다. 최소 비용 경로를 찾는데에는 [다익스트라 알고리즘(Dijkstra Algorithm)](Dijkstra%20Algorithm)이 사용된다.
+링크 상태 알고리즘(Link State Algorithm, LS)은 중앙 집중형 라우팅 알고리즘이다. 최소 비용 경로를 찾는데에는 [다익스트라 알고리즘](../../../Algorithm/Graph/Shortest%20Path/Dijkstra%20Algorithm.md)이 사용된다.
 
 ## Link-state broadcast
 링크 상태 알고리즘은 네트워크 토폴로지와 모든 링크 비용이 알려져 있어서 링크들의 상태를 입력값으로 하여 알고리즘을 수행한다. 이 정보는 어떻게 얻어질 수 있을까?
 
-이를 지원하기 위하여 각 노드는 자신과 직접 연결된 링크의 식별자와 비용 정보를 담은 링크 상태 패킷(link-state packet, LSP)을 네트워크상의 다른 모든 노드로 브로드캐스트하게 함으로써 가능하다. 이를 통해 각 노드는 다른 모든 노드와 링크의 정보를 얻어 알고리즘을 수행할 수 있다.
+이를 지원하기 위하여 각 노드는 자신과 직접 연결된 링크의 식별자와 비용 정보를 담은 링크 상태 패킷(link-state packet, LSP)을 네트워크상의 다른 모든 노드로 브로드캐스트하게 함으로써 가능하다. 이를 통해 각 노드는 네트워크에 대한 동일하고 완벽한 관점을 가지고 알고리즘을 수행할 수 있다.
 
 ## 진동 상태와 해결법
 ![](https://i.imgur.com/9pPdoT2.png)
