@@ -39,5 +39,5 @@ $$EstimatedRTT = (1 - \alpha) \times EsteimatedRTT + \alpha \times SampleRTT $$
 
 ## DevRTT
 RTT의 변화율을 측정하는 것도 매우 중요하다. DevRTT는 SampleRTT가 EstimatedRTT로부터 얼마나 많이 벗어나는지를 예측하는 지표다.
-$$DevRTT = (1 - \beta) \times DevRTT + B \times |SampleRTT - EstimatedRTT | $$
+$$DevRTT = (1 - \beta) \times DevRTT + \beta \times |SampleRTT - EstimatedRTT | $$
 $\beta$의 권장값은 0.25이다.
