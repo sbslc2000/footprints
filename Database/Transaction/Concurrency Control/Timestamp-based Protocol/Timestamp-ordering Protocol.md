@@ -2,7 +2,7 @@
 상위 개념: "[[Concurrency Control]]"
 ---
 # Timestamp-ordering Protocol
-타임스탬프 순서 규약(Timestamp-ordering protocol)은 각 트랜잭션들에 타임스탬프 순서를 직렬 가능성 순서로 사용하여 동시성을 제어하는 규약이다. TS($T_i$) < TS($T_j$)일 경우, 시스템은 트랜잭션 $T_i$가 트랜잭션 $T_j$보다 먼저 나오는 직렬 스케줄과 동등한 스케줄이 생성되도록 보장한다.
+**타임스탬프 순서 규약**(Timestamp-ordering protocol)은 각 트랜잭션들에 타임스탬프 순서를 직렬 가능성 순서로 사용하여 동시성을 제어하는 규약이다. TS($T_i$) < TS($T_j$)일 경우, 시스템은 트랜잭션 $T_i$가 트랜잭션 $T_j$보다 먼저 나오는 직렬 스케줄과 동등한 스케줄이 생성되도록 보장한다.
 
 ## Timestamp
 타임스탬프는 트랜잭션이 실행되기 전에 데이터베이스 시스템이 할당한다. 다음과 같은 방법으로 할당할 수 있다.
@@ -17,8 +17,8 @@
 
 ## 동작 원리
 * $T_i$가 read(Q)를 수행하려 할 때,
-	* TS($T_i$) < W-timestamp(Q)라면, 더 나중에 시작된 트랜잭션이 Q를 변경한 상황이다. 새로운 값을 읽게 만들기 위해서 read(Q) 연산은 거저되고 $T_i$는 롤백된다.
-	* TS($T_i$) $\geq$ W-timestamp(q)라면, read 연산은 실행되고 R-timestamp(Q)는 R-timestamp(Q)와 TS(T_i) 중 큰 값으로 설정된다.
+	* TS($T_i$) < W-timestamp(Q)라면, 더 나중에 시작된 트랜잭션이 Q를 변경한 상황이다. 새로운 값을 읽게 만들기 위해서 read(Q) 연산은 거절되고 $T_i$는 롤백된다.
+	* TS($T_i$) $\geq$ W-timestamp(Q)라면, read 연산은 실행되고 R-timestamp(Q)는 R-timestamp(Q)와 TS($T_i$) 중 큰 값으로 설정된다.
 * $T_i$가 write(Q)를 수행하려 할 때,
 	* TS($T_i$) < R-timestmap(Q)라면, $T_i$가 쓰려는 값은 더 나중에 실행된 트랜잭션이 읽은 값이므로 시스템은 $T_i$가 값을 기록하는 것을 허용하지 않는다. 시스템은 write 연산을 거절하고 $T_i$를 롤백한다.
 	* TS($T_i$) < W-timestamp(Q)라면, 더 나중에 실행된 트랜잭션이 이미 Q를 갱신했으므로 연산은 거절되고 $T_i$는 롤백된다.
