@@ -1,5 +1,6 @@
 ---
-상위 개념: "[[../Spring Core|Spring Core]]"
+상위 개념: "[[Spring Type Converting]]"
+"":
 ---
 # Converter
 ```java
