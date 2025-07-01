@@ -27,3 +27,21 @@
 하지만 특정 버전이 롤백될 때, 그 결과가 해당 버전의 적용 이후에 적용된 다른 버전의 스크립트와 충돌한다면 어떻게 될까? 예를 들어 V30에는 Member 테이블에 age라는 필드를 추가했고, V31에는 age 필드에 인덱스를 생성했을 수 있다. 이 경우 V30의 롤백 스크립트를 수행하는 것은 스키마 불일치에 의한 데이터베이스 오류를 야기할 수 있다.
 
 이러한 복잡성 때문에 대부분의 프로덕션 시스템에서는 단방향 마이그레이션을 사용하는 것이 더 안전하다고 여기며 이를 선호한다.
+
+--changeset pete:2-add-age-column
+
+--comment: add 'age' column to person table
+
+ALTER TABLE person ADD COLUMN age INT;
+
+--rollback ALTER TABLE person DROP COLUMN age;
+
+  
+
+--changeset pete:3-create-name-index
+
+--comment: create index on 'name' column of person table
+
+CREATE INDEX idx_person_name ON person(name);
+
+--rollback DROP INDEX idx_person_name;
