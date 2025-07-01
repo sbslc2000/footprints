@@ -28,20 +28,3 @@
 
 이러한 복잡성 때문에 대부분의 프로덕션 시스템에서는 단방향 마이그레이션을 사용하는 것이 더 안전하다고 여기며 이를 선호한다.
 
---changeset pete:2-add-age-column
-
---comment: add 'age' column to person table
-
-ALTER TABLE person ADD COLUMN age INT;
-
---rollback ALTER TABLE person DROP COLUMN age;
-
-  
-
---changeset pete:3-create-name-index
-
---comment: create index on 'name' column of person table
-
-CREATE INDEX idx_person_name ON person(name);
-
---rollback DROP INDEX idx_person_name;
