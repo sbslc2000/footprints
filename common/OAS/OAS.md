@@ -1,0 +1,2 @@
+# OAS
+OAS(OpenAPI Specification)이란 RESTful API를 설명하고 문서화하는데 사용되는 표준이다. OAS는 API의 구조, 기능, 상호작용 방법 등을 명세화하여 개발자들이 API를 쉽게 이해하고 사용할 수 있도록 돕는다. OAS는 주로 json이나 yaml 형식으로 작성되며, Swagger Editor와 같은 도구를 사용하여 시각적으로 편집하고 관리할 수 있다.
