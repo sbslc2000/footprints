@@ -3,13 +3,13 @@
 ---
 # Dependency Inversion Principle
 
-의존성 역전 원칙
+> High-level modules should not depend on low-level modules. Both should depend on abstractions.
 
-> **High-level modules should not depend on low-level modules. Both should depend on abstractions.**
 
-High-level Module은 Low-Level Module에 dependency를 가져서는 안된다. 이 둘은 모두 Abstraction에 dependency를 가져야 한다.
+의존성 역전 원칙(Dependency Inversion Principle, DIP)는 객체지향 설계원칙 중 하나이다.
 
-- Abstractions should not depend on details. Details should depend on abstractions.
+의존성 역전 원칙은 고수준 모듈이 저수준 모듈에 의존성을 가져서는 안된다고 말한다. 
+
 
 DIP는 구조적 분석설계방법을 따른다면 나타날 수 있는 dependency의 방향을 반대로 뒤집어 준다.
 
