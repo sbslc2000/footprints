@@ -2,6 +2,23 @@
 상위 개념: "[[Domain]]"
 ---
 # Aggregate
+```mermaid
+graph TD
+	Order[Order]
+	ShippingInfo[ShippingInfo]
+	Address[Address]
+	Receiver[Receiver]
+	OrderLine[OrderLine]
+	Product[Product]
+	
+	Order --> ShippingInfo
+	ShippingInfo --> Address
+	ShippingInfo --> Receiver
+	Order --> OrderLine
+	OrderLine --> Product
+
+
+```
 애그리거트는 연관된 [Entity](Domain%20Element/Entity.md)와 [값 타입](Domain%20Element/Value%20Object.md)을 개념적으로 하나로 묶은 것이다. 
 
 애그리거트는 모델을 이해하는 데 도움을 줄 뿐만 아니라 일관성을 관리하는 기준도 된다. 
