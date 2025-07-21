@@ -10,3 +10,10 @@ Nest.js의 Module은 애플리케이션을 기능 단위로 모듈화하고, 각
 })
 export class SomeModule {}
 ```
+
+
+## providers
+Provider란 의존성 주입이 되는 대상 객체를 의미한다. 각 모듈의 프로바이더들은 `providers` 배열에 작성되어야 한다.
+
+## exports
+providers에 등록된 객체 중 모듈 외부로 노출하고자 하는 객체들을 등록한다.
