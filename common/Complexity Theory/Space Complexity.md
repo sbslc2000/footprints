@@ -1,5 +1,6 @@
 ---
-상위 개념: "[[Data Structure]]"
+상위 개념: "[[Complexity Theory]]"
+"":
 ---
 # Space Complexity
 프로그램의 공간복잡도는 프로그램을 실행시켜 완료하는데에 필요로 하는 공간의 양을 의미한다.
