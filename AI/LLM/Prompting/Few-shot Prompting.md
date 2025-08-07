@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[../LLM|LLM]]"
+상위 개념: "[[Prompting]]"
 ---
 # Few-shot Prompting
 Few-shot Prompting이란 LLM에게 작업 방식의 예시를 몇개 보여준 뒤, 유사한 방식으로 새로운 결과를 만들게 유도하는 프롬프트 기법이다.
