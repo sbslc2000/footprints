@@ -18,9 +18,29 @@ permits 키워드 뒤에는 상속이 허용되는 서브클래스 목록을 명
 상속이 허용된 클래스들은 반드시 다음 중 하나로 선언되어야 한다.
 
 1. final
+더 이상의 상속을 허용하지 않음
 ```java
 public final class Circle extends Shape {
     @Override
     public double area() { return Math.PI * 1 * 1; }
+}
+```
+
+2. sealed
+다시 다른 하위 클래스들에게 상속을 제한 
+```java
+public sealed class Rectangle extends Shape
+    permits FilledRectangle, TransparentRectangle {
+    @Override
+    public double area() { return 10 * 20; }
+}
+```
+
+3. non-sealed
+더 이상 상속을 제한하지 않고, 자유롭게 상속 가능
+```java
+public non-sealed class Square extends Shape {
+    @Override
+    public double area() { return 5 * 5; }
 }
 ```
