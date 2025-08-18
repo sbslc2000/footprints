@@ -7,7 +7,7 @@ Java의 sealed class와 permits 문법은 Java 17버전부터 정식적으로 �
 ## 사용법
 sealed 키워드를 붙이면 해당 클래스를 상속할 수 있는 클래스의 목록을 제한할 수 있다. 즉, 특정 클래스들만이 이 클래스를 상속하도록 허용한다.
 ```java
-public sealed class Shape 
+public abstract sealed class Shape 
 	permits Circle, Rectangle, Square {
 	public abstract double area();	
 }
