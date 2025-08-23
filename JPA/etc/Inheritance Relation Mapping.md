@@ -136,9 +136,7 @@ Item findItem = em.find(Item.class, movie.getId());
 
 
 # @MappedSuperclass
-
 DB의 슈퍼타입 - 서브타입 관계로 나누고 싶지는 않지만 , 객체 레벨에서 공통 매핑 정보가 필요할 때 사용한다.
-
 ```java
 @MappedSuperclass //매핑정보만 제공하는 슈퍼클래스
 public abstract class BaseEntity {
