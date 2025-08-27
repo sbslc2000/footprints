@@ -51,3 +51,7 @@ https 스키마로 요청할 때에만 쿠키가 전송되는 것을 가능하�
 Cross-site 요청에 대해 쿠키를 보낼 것인지 말 것인지를 결정하는 속성이다. 
 
 site는 프로토콜과 도메인 네임의 마지막 부분만을 포함하는 개념이다. 예를 들어 https://app.example.com:8080 이라는 주소가 있다면, https와 example.com이 같다면 모두 같은 site로 취급된다. 
+
+* Strict : 정확히 site가 동일한 경우에만 쿠키를 서버로 전송한다.
+* Lax: 이미지 또는 프레임 로드와 같은 Cross-site 요청에는 쿠키가 전송되지 않지만, 사용자가 외부 사이트에서 origin 사이트로 이동할 때는 쿠키가 전송된다.
+* None: Cross-site 및 Same-site 요청 시 모두 쿠키를 전송한다.
