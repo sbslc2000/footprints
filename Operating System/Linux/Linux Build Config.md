@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Linux]]"
+---
 # Linux Build Config
 리눅스를 빌드할 때에는, 필요한 기능이나 드라이버만 포함시킬 수 있다. 설정 옵션은 CONFIG라는 접두사가 붙는다. (ex. CONFIG_SMP)
 
