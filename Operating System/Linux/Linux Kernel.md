@@ -11,3 +11,20 @@
 * 커널은 프로세스마다 고정된 크기의 작은 스택만을 가진다.
 * 커널은 비동기 인터럽트를 가지고, 선점형이며, SMP를 지원하기 때문에 동기화와 동시성이 중요한 고려사항이다.
 * 이식성이 중요하다.
+
+### Inline Function
+```c
+static inline void wolf(unsigned long tail_size)
+```
+C99와 GNU C는 인라인 함수를 지원하며, 커널 소스코드는 인라인 함수를 적극적으로 사용한다. 인라인 함수란 함수의 명령들이 별도의 함수 스택을 생성하지 않으며, 호출자의 코드에 복사되는 함수를 의미한다. 이는 함수의 호출-반환 (레지스터 저장과 복구)에 의한 오버헤드를 줄여주지만, 코드의 바이너리 크기가 증가하고 캐시 사용량이 증가한다는 단점이 있다.
+
+### Inline Assembly
+```c
+unsigned int low, high;
+
+asm volatile("rdtsc" : "=a" (low), "=d" (high));
+
+/* low and high now contain the lower and upper 32-bits of the 64-bit tsc */
+```
+gcc C 컴파일러는 일반적인 C 함수 안에 어셈블리 명령어를 삽입하는 것을 가능하게 한다. 이 기능은 특정 시스템 아키텍처에 고유한 커널의 일부에서만 사용된다.
+
