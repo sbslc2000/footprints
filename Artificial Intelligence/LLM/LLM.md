@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[../AI|AI]]"
+상위 개념: "[[../Artificial Intelligence|Artificial Intelligence]]"
 ---
 # LLM
 LLM은 대규모 언어 모델(Large Language Model)의 약자로, 방대한 양의 텍스트 데이터를 학습하여 인간의 언어를 이해하고 생성할 수 있는 인공지능 모델을 의미한다. 복잡한 자연어 처리 작업을 수행하며, 텍스트 생성, 번역, 질의응답 등 다양한 분야에서 활용된다.
