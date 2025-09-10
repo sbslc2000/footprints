@@ -29,3 +29,28 @@ self.addEventListener('install', (event) => {
 이미 활성화된 워커가 있었다면, 새로 설치된 서비스 워커는 바로 교체되지 않고 대기 상태가 된다. 이는 페이지 실행 중에 갑자기 워커가 변경되면 리소스가 꼬일 수 있기 때문이다. 그래서 보통은 웹페이지를 닫았다가 다시 열 때 새로운 워커가 적용된다.
 
 ### 4. 활성화(Activate)
+활성화는 기존 워커가 제거되고, 새로운 워커가 들어올 때 발생하는 이벤트입니다. 주로 옛날 캐시 정리 작업을 수행합니다.
+
+```js
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then(keys => 
+      Promise.all(keys.map(key => key !== 'v1' ? caches.delete(key) : null))
+    )
+  );
+  self.clients.claim();
+});
+```
+
+### 5. 동작 (Running)
+활성화된 서비스 워커는 이제 fetch 이벤트나 push 이벤트 등을 처리할 수 있습니다.
+```js
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then(res => res || fetch(event.request))
+  );
+});
+```
+
+### 6. 업데이트 (Update)
+브라우저는 주기적으로 서비스 워커 파일을 다시 가져와 비교합니다. 이 때 만약 내용이 바뀌었다면, 다시 Install -> Waiting -> Activate 흐름을 밟습니다.
