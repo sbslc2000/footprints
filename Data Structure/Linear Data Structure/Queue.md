@@ -1,3 +1,6 @@
+---
+상위 개념: "[[../Data Structure|Data Structure]]"
+---
 # Queue
 큐(Queue)란, 선입 선출(FIFO, First-In-First-Out) 방식으로 동작하는 선형 자료구조이다. 먼저 추가된 데이터가 먼저 제거되는 구조를 가진다.
 
