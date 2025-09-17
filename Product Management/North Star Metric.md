@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Product Management]]"
+---
 # North Star Metric
 북극성 지표(North Star Metric)이란 프로덕트의 핵심 가치를 가장 잘 나타내는 중요한 지표를 의미한다.
 

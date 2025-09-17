@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[graph/Graph Search]]"
+상위 개념: "[[Graph Search]]"
 ---
 # BFS
 ![](https://i.imgur.com/OdGn5yd.png)
