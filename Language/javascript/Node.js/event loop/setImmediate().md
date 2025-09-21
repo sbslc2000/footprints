@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Node.js]]"
+상위 개념: "[[Node.js Event Loop]]"
 ---
 # setImmediate
 setImmediate()란 Node.js 전용 API로, 현재 이벤트 루프 사이클의 poll 단계가 끝난 직후 check 단계에 콜백을 실행하도록 예약한다.
