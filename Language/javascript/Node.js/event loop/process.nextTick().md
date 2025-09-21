@@ -19,3 +19,40 @@ process.nextTick(() => console.log('nextTick'));
 
 // 출력 순서(대개): nextTick → promise → timeout
 ```
+
+
+## 예제 : EventEmitter
+```javascript
+const EventEmitter = require('node:events');
+class MyEmitter extends EventEmitter {
+  constructor() {
+    super();
+    this.emit('event');
+  }
+}
+const myEmitter = new MyEmitter();
+myEmitter.on('event', () => {
+  console.log('an event occurred!');
+});
+```
+위 코드는 생성자 안에서 이벤트를 즉시 발생시키므로, 사용자가 핸들러를 등록하기도 전에 이벤트가 발행되어 버린다.
+
+```js
+const EventEmitter = require('node:events');
+class MyEmitter extends EventEmitter {
+  constructor() {
+    super();
+    // 생성자가 끝난 뒤 이벤트 발생
+    process.nextTick(() => {
+      this.emit('event');
+    });
+  }
+}
+const myEmitter = new MyEmitter();
+myEmitter.on('event', () => {
+  console.log('an event occurred!');
+});
+```
+
+이를 방지하기 위하여 생성자 안에 process.nextTick()을 사용하면, 생성자가 끝난 뒤 이벤트가 실행되므로 사용자가 핸들러를 등록할 기회를 가질 수 있다.
+
