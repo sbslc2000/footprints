@@ -9,4 +9,4 @@ HTML이 서버에서 미리 렌더링되므로, 유저에게 빠른 첫 콘텐�
 Hydration을 사용하는 프레임워크로는 Next.js와 Nust.js가 있으며, React v16.0부터는 hydrate 함수가 API에 도입되었다.
 
 ## Hydration Error
-Hydration 오류는 서버에서 렌더링 된 HTML에 대하여 자바스크립트가 hydration하는 과정에서 DOM 구조나 상태가 불일치 할 때 발생한느 오류이다.
+Hydration 오류는 서버에서 렌더링 된 HTML에 대하여 자바스크립트가 hydration하는 과정에서 DOM 구조나 상태가 불일치 할 때 발생하는 오류이다.
