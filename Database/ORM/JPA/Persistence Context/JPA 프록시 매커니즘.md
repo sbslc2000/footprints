@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[JPA]]"
+상위 개념: "[[../JPA]]"
 ---
 # 논의점
 
@@ -13,7 +13,7 @@ System.out.pritnln("Username: "+member.getUsername());
 때에 따라서는 연관관계에 있는 객체들은 사용되지 않을 수도 있다. 하지만 모든 상황에서 이러한 객체들을 함께 조회한다면 성능 최적화가 이루어지지 않을 수 있다. 
 
 # 프록시를 통한 해결
-Hibernate는 위와 같은 문제를 프록시를 통해 해겷한다. 이 문서에서는 JPA에서 프록시를 어떻게 다루는지에 대해서 설명하고, 위 문제를 해결하는 내용은 [[Persistence Context/지연로딩과 즉시로딩]] 에서 다루기로 한다.
+Hibernate는 위와 같은 문제를 프록시를 통해 해겷한다. 이 문서에서는 JPA에서 프록시를 어떻게 다루는지에 대해서 설명하고, 위 문제를 해결하는 내용은 [[지연로딩과 즉시로딩]] 에서 다루기로 한다.
 
 ## em.find() vs em.getReference()
 
@@ -96,7 +96,7 @@ referenceMember.getUsername();// LazyInitializationException 발생!
 emf.getPersistenceUnitUtil().isLoaded(referenceMember); // true or false
 ```
 * ** 프록시 강제 초기화**
-프록시의 target에 DB로부터 Entity를 가져온다. 이는 [[Hibernate]]에서 제공하는 메서드로, JPA에서는 강제 초기화 기능을 제공하지 않는다.
+프록시의 target에 DB로부터 Entity를 가져온다. 이는 [[../Hibernate]]에서 제공하는 메서드로, JPA에서는 강제 초기화 기능을 제공하지 않는다.
 ```java
 Hibernate.initialize(referenceMember); 
 ```

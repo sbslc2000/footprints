@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Relational Mapping/Primary Key Mapping]]"
+상위 링크: "[[Primary Key Mapping]]"
 ---
 데이터베이스 시퀀스는 유일한 값을 순서대로 생성하는 특별한 데이터베이스 오브젝트 (예: 오라클 시퀀스)
 ```java
@@ -15,7 +15,7 @@ public class Member {
 ```
 ![](https://i.imgur.com/AASCZHl.png)
 
-Sequence 전략에서는 [[Relational Mapping/IDENTITY 전략]]과 다르게 INSERT Query가 발생하기 전에 다음 값을 알 수 있어서, 이를 쿼리를 통해 얻어서 영속성 컨텍스트에 넣어준다. 따라서 INSERT Query가 발생하는 시점을 트랜잭션 시점으로 미룰 수 있다.
+Sequence 전략에서는 [[IDENTITY 전략]]과 다르게 INSERT Query가 발생하기 전에 다음 값을 알 수 있어서, 이를 쿼리를 통해 얻어서 영속성 컨텍스트에 넣어준다. 따라서 INSERT Query가 발생하는 시점을 트랜잭션 시점으로 미룰 수 있다.
 ### AllocationSize
 allocationSize 속성을 통해 성능 최적화를 할 수 있다.
 SEQUENCE 전략에서는 엔티티가 생성될 때마다 next pk value를 네트워크를 통해 DB에서 가져와야하는데, 이 경우 빈번한 DB 접속에 의한 오버헤드가 발생하여 성능 저하의 원인이 된다. 이러한 문제를 JPA에서는 allocationSize로 해결한다.

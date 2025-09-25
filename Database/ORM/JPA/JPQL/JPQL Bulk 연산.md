@@ -1,4 +1,4 @@
-일반적으로 JPA가 제공하는 [변경 감지](Persistence%20Context.md##변경%20감지*Dirty%20Checking*)는 각각의 엔티티 마다 쿼리를 발생시킨다. 이러한 문제를 해결하기 위해 JPA는 Bulk 연산 API를 제공한다.
+일반적으로 JPA가 제공하는 [변경 감지](../Persistence%20Context/Persistence%20Context.md##변경%20감지*Dirty%20Checking*)는 각각의 엔티티 마다 쿼리를 발생시킨다. 이러한 문제를 해결하기 위해 JPA는 Bulk 연산 API를 제공한다.
 
 
 # 사용 방법

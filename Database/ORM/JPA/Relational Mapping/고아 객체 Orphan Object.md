@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Persistence Context]]"
+상위 링크: "[[../Persistence Context/Persistence Context]]"
 ---
 고아 객체 제거 : 부모 엔티티와 연관관계가 끊어진 자식 엔티티를 자동으로 삭제하는 기능
 

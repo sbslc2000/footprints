@@ -16,9 +16,9 @@ JPA는 Object와 Relational Model의 패러다임 차이를 중간에서 해소�
 [[Relational Mapping/Relational Mapping]]에서는 데이터베이스 테이블간 Relation에 대해 어떻게 Object 레벨에서 매핑시키는지에 대해 설명합니다.
 
 ## JPA에서 지원하는 쿼리 방법
-* [[JPQL]]
-* [[JPA Criteria]]
-* [[QueryDSL]]
+* [[JPQL/JPQL]]
+* [[QueryBuilder/JPA Criteria]]
+* [[QueryBuilder/QueryDSL]]
 * 네이티브 SQL
 	* JPQL로 해결할 수 없는 특정 데이터베이스에 의존적인 기능을 사용할 때
 	* `em.createNativeQuery("select MEMBER_ID, city, street, zipcode from MEMBER")`
@@ -29,9 +29,9 @@ JPA는 Object와 Relational Model의 패러다임 차이를 중간에서 해소�
 [[영속성 전이 + 고아 객체 => 생명주기]]
 
 [[Persistence Context/JPA 프록시 매커니즘]]
-[[Persistence Context]]
-[[EntityManagerFactory]]
+[[Persistence Context/Persistence Context]]
+[[Persistence Context/entitymanager/EntityManagerFactory]]
 [[Relational Mapping/JPA Value Type]]
 
 ### 함께  보기
-[[JPA 로깅]]
+[[etc/JPA 로깅]]

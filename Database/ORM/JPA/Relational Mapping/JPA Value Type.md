@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[JPA]]"
+상위 개념: "[[../JPA]]"
 ---
 JPA Data Type은 크게 Entity Type과 Value Type으로 나눌 수 있다.
 
