@@ -4,7 +4,8 @@
 # Process Descriptor
 리눅스 커널은 프로세스 목록을 태스크 리스트(task list)라 불리는 원형 이중 연결 리스트에 저장한다. 태스크 리스트의 각 요소는 task_struct 타입의 프로세스 디스크립터이며, 이는 \<Linux/sched.h>에 정의되어 있다. 프로세스 디스크립터는 특정 프로세스에 대한 모든 정보를 담고 있다.
 
-![Pasted image 20250906172757.png](app://a5ef061aa4c304f11f9aeaa7e85d9373f65d/Users/seobeomseok/Documents/My%20Workspace/images/Pasted%20image%2020250906172757.png?1757147277497)
+![](https://i.imgur.com/45Y0smN.png)
+
 task_struct는 큰 자료구조로, 32비트 기계에서 약 1.7 킬로바이트 정도의 크기를 가진다. 이 자료구조에는 사용중인 파일, 프로세스의 주소 공간, 보류 중인 시그널, 프로세스의 상태 등의 정보가 포함된다.
 
 ## Allocating the Process Descriptor
@@ -12,7 +13,7 @@ task_struct는 큰 자료구조로, 32비트 기계에서 약 1.7 킬로바이�
 
 하지만 2.6 버전 이후에는 프로세스 디스크립터가 슬랩 할당자(slab allocator)를 통해 동적으로 생성되면서, 새로운 구조체인 thread_info가 만들어졌다. 이 구조체는 스택이 아래로 자라는 경우 스택의 맨 아래에, 스택이 위로 자라는 경우 스택의 맨 위에 위치하게 된다.
 
-![Pasted image 20250906173441.png](app://a5ef061aa4c304f11f9aeaa7e85d9373f65d/Users/seobeomseok/Documents/My%20Workspace/images/Pasted%20image%2020250906173441.png?1757147681955)
+![](https://i.imgur.com/1xfBkvB.png)
 
 thread_info 구조체는 x86d에서 \<asm/thread_info.h>에 정의되어 있다.
 
