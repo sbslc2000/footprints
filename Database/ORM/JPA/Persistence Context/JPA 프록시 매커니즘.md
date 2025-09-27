@@ -100,6 +100,3 @@ emf.getPersistenceUnitUtil().isLoaded(referenceMember); // true or false
 ```java
 Hibernate.initialize(referenceMember); 
 ```
-
-
-### 더 보기
