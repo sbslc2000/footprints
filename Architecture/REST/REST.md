@@ -1,5 +1,5 @@
 # REST 
-REST(Representational State Transfer) 아키텍처 스타일이 로이 필딩의 논문에서 제안된 분산 하이퍼미디어 시스템을 위한 아키텍처 스타일이다.
+REST(Representational State Transfer)란 로이 필딩의 논문에서 제안된 분산 하이퍼미디어 시스템을 위한 아키텍처 스타일이다.
 
 ## 개념
 
