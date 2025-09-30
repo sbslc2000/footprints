@@ -9,6 +9,8 @@ Hill-Climbing(HC) 혹은 Gradient descent라고 부르는 이 알고리즘은 �
 2. 현재 솔루션으로부터 새로운 솔루션을 만들어내고(transformation), 이를 평가한다.
 3. 만약 새로운 솔루션이 더 낫다면, 해당 솔루션을 현재 솔루션으로 간주하고, 아니라면 폐기한다.
 4. 2번과 3번을 반복한다.
+
+
 ## Pseudo code
 ```
 current <- guess
