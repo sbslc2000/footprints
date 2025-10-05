@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[Similarity]]"
+상위 개념: "[[Similarity]]"
 ---
 # Eudclidean Distance
 
