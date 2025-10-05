@@ -4,7 +4,6 @@
 # Functional Requirements
 기능적 요구사항이란 애플리케이션이 제공해야하는 기능에 대한 요구사항을 말한다. 시스템 혹은 서비스가 제공해야하는 기술을 설명하며, 더 자세히는 어떠한 input을 받아서, 어떻게 동작할 것인지에 대한 요구사항이다.
 
-
 ## 표현 방식
 
 ### Traditional Approach: Use Declarative Statement
