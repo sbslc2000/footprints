@@ -49,45 +49,46 @@ Class Diagram은 OO 시스템에 존재하는 클래스를 표현하는 모델�
 	-age: int {readOnly}
 
 ## Operation
+연산(operation)은 클래스의 객체에 대해 수행하거나 객체가 수행할 수 있는 함수를 표현한다. 각 연산에는 이름, 매개변수, 반환 타입, 가시성 등을 표현할 수 있다.
 
-* signature
-* access modifier
+		+calculation(width: double, height: double): double
 
 ## Association
+Association은 객체 간 발생하는 연관관계의 클래스 레벨에서의 표현이다.
 
 ### Type
+![](https://i.imgur.com/cELOe2r.png)
+
+연관관계는 5 종류가 존재하며, 우측으로 갈 수록 더 강한 결합 관계이다.
+
+* **Dependency** 
+	* 점선과 화살표로 표현되며, 일시적인 시간동안만 연관관계를 갖는 경우에 해당한다.
+	* ex. 로컬 변수, 파라미터, 반환 타입
+* **Association**
+	* 직선으로 표현되며, 어떤 객체가 다른 객체를 가지고 있으며 지속적으로 사용될 때에 해당한다.
+	* ex. 클래스의 멤버 변수로 다른 클래스 오브젝트에 대한 레퍼런스를 가지고 있는 경우
+* **Aggregation & Composition**
+	* 다이아몬드로 표현되며, 어떤 객체가 다른 객체의 구성품일 때 사용된다.
+	* 이 때, 다이아몬드 측이 전체이고 반대 측이 'part'이다.
+	* 비어있는 다이아몬드는 Aggregation으로, 부분에 해당하는 객체가 전체에 해당하는 객체와 별개로 존재할 수 있음을 표현한다.
+	* 채워진 다이아몬드는 Composition으로, 부분에 해당하는 객체가 전체에 해당하는 객체에 완전히 종속됨을 표현한다.
+* **Inheritance**
+	* 빈 화살표와 직선으로 표현되며, 두 클래스가 상속 관계임을 표현한다.
+
 
 ### Navigability
+![](https://i.imgur.com/VuimJnE.png)
+
+한 클래스에서 다른 클래스에 접근할 수 있는지의 여부를 가시성에 의해 표현할 수 있다.
 
 ### Degree
+![](https://i.imgur.com/qJrWcSC.png)
 
 ### Multiplicity
+![](https://i.imgur.com/DXP00BU.png)
+객체 간 연관될 수 있는 객체의 개수를 다중성을 통해 표현할 수 있다.
 
 ### Role
+![](https://i.imgur.com/1fk24QA.png)
 
-* Navigability
-	* 화살표로 표현
-	* 요구사항 모델에서는 그냥 간단히 화살표 없이 표현하기도 함.
-* two different classes can be related by several asosciations
-* degree
-	* unary(reflexive)
-	* binary
-	* tenary
-		* higher degrees are extremely rare
-		* more difficult to read
-		* so most cases only unary and binary associations
-* multiplicity
-	* specifies a restriction on the number of objects in a class that may be related to an object in another class
-	* lower bound == 0 : optional (may not be related)
-	* lower bound > 0 : mandatory (must be related)
-	* special cardinalities
-		* * -> min 0 max infty -> an unlimited upper bound
-		* 1 -> min 1 and max 1
-* role
-* aggregation and composition
-	* show the 'part'
-	* aggregation
-		* may exist independent
-		* participation is optional
-	* composition
-		* may not exist independent
+객체와 객체가 연관되는 경우, 그 연결에는 Role이 필요하다. Role이란 연관관계에서 객체들이 어떤 자격으로 연관관계를 이루는가를 설명하는 문구이다.
