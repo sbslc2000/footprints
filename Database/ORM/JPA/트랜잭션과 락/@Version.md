@@ -75,5 +75,3 @@ Hibernate: update counter set count=? where id=?
 Hibernate: update counter set count=? where id=?
 count: 1
 ```
-
-#todo
