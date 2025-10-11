@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[Requirement Analysis]]"
+상위 개념: "[[Requirement]]"
 ---
 # Non-functional Requirements
 비기능 요구사항(Non-functional Requirements)란 시스템이 '무엇을 해야하는지'가 아니라, '어떻게 동작해야 하는가'를 규정하는 요구사항이다. 시스템의 품질적 특성이나 제약 조건을 다룬다.
