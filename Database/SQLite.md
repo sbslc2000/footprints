@@ -1,4 +1,9 @@
+---
+상위 개념: "[[Database]]"
+---
 # SQLite
+![](https://i.imgur.com/gZhgDz0.png)
+
 SQLite는 임베디드 형태로 동작하는 것으로 설계된 관계형 데이터베이스이다. 
 
 ## 특징
