@@ -1,5 +1,5 @@
 # JS Deep Copy
-간단하게 깊은 복사르 처리할 수 있는 방법 중 하나는 JSON으로 직렬화 후 역직렬화하여 객체로 만드는 것이다.
+간단하게 깊은 복사를 처리할 수 있는 방법 중 하나는 JSON으로 직렬화 후 역직렬화하여 객체로 만드는 것이다.
 ```js
 function copyObjectViaJSON(target) {
 	return JSON.parse(JSON.stringify(target));
