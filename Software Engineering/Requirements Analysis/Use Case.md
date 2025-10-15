@@ -13,7 +13,7 @@ Use Case는 요구사항 추출(requirements elicitation) 과정에서도 널리
 ## 용어
 
 ### Actor
-Actor는 시스템과 상호작용하여 어떤 목표(goal)을 달성하려는 주체이다. Actor는 사람일 수도 있고, 다른 시스템일 수도 있다.
+Actor는 시스템과 상호작용하여 어떤 목표(goal)을 달성하려는 주체이다. Actor는 사람일 수도 있고, 다른 시스템일 수도 있다. Actor는 시스템에 입력을 제공하거나, 출력을 받거나, 혹은 둘 다를 할 수 있다.
 
 ### Primary Actor
 모든 유즈케이스에는 유즈케이스를 시작시키는 주체가 있다. 이 주체를 주요 행위자(Primary actor)라고 부른다.
