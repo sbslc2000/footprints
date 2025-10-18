@@ -12,5 +12,3 @@ Next.js란 풀스택 애플리케이션을 구축하기 위한 리액트 프레�
 > 1) Transpile : JSX나 Typescript와 같은 문법을 순수 JS로 변환한다.
 > 2) Bundle : 여러 개의 JS/TS 모듈을 하나 또는 여러개의 번들 파일로 합친다. webpack 혹은 turbopack이 이 역할을 수행한다.
 > 3) minify : 불필요한 공백을 없애고, 변수 이름을 단축하고, 인라인 최적화를 수행하여 전체적인 코드 크기를 줄이고 로딩 속도를 향상시킨다.
-
-## directives
