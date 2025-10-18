@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Next.js Directive]]"
+---
 # use client
 ```ts
 'use client'
