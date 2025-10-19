@@ -1,3 +1,6 @@
+---
+상위 개념: "[[Next.js]]"
+---
 # Prefetching
 > Prefetching is the process of loading a route in the background before the user navigates to it.
 
@@ -31,4 +34,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 Next.js는 \<Link> 컴포넌트가 사용된 라우팅 링크에 대해서, 해당 링크가 사용자의 뷰포트에 드러설 때 해당 페이지를 미리 로드한다.
 
-Prefetching이 동작하는 방식은 해당 링크가 정적 라우팅인지 동적 라우팅인지에 따라 달라진다. 정적 라우팅이라면 페이지 전체가 prefetch되며, 동적 라우팅이라면 (뷰포트에 들어왔을 때 어떤 페이지를 가져와야할 지 불분명할 수도 있으므로) loading.tsx만 prefetch한다.
+Prefetching이 동작하는 방식은 해당 링크가 정적 라우팅인지 동적 라우팅인지에 따라 달라진다. 정적 라우팅이라면 페이지 전체가 prefetch되며, 동적 라우팅이라면 (뷰포트에 들어왔을 때 어떤 페이지를 가져와야할 지 불분명할 수도 있으므로) loading.tsx만 prefetch한다. 
