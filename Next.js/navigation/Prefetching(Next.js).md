@@ -1,5 +1,6 @@
 ---
-상위 개념: "[[Next.js]]"
+상위 개념: "[[Next.js Navigation]]"
+"":
 ---
 # Prefetching
 
