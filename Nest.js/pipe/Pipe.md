@@ -1,5 +1,5 @@
 ---
-상위 링크: "[[NestJS]]"
+상위 링크: "[[../Nest.js]]"
 ---
 # Pipe
 ![](https://i.imgur.com/wwLUcPQ.png)
