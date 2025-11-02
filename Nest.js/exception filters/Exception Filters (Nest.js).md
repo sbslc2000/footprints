@@ -1,3 +1,6 @@
+---
+상위 개념: "[[../Nest.js|Nest.js]]"
+---
 # Exception Filter
 Nest.js에는 애플리케이션에서 발생했지만 사용자의 코드로부터 처리되지 않은 예외들을 처리하는 내장된 기본 예외 처리 레이어가 존재한다. 이는 Global Exception Filter에 의해 수행되며, HttpException과 그 하위 예외들을 처리하여 적절한 응답을 만들고, HttpExcpetion이 아닌 예외들에 대해서는 다음 응답을 반환한다.
 ```json
