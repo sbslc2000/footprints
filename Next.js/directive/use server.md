@@ -55,3 +55,4 @@ export default async function PostPage({ params }: { params: { id: string } }) {
 }
 ```
 'use server'를 함수 정의 내부 첫째줄에 기입하면, 해당 함수는 'use server'함수로 취급된다. 위 경우 updatePost는 호출될 때 오직 서버에서만 수행된다.
+
