@@ -1,5 +1,5 @@
 ---
-상위 개념: "[[MySQL]]"
+상위 개념: "[[MySQL User Privilege]]"
 ---
 # MySQL User 
 
