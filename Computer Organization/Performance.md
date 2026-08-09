@@ -3,16 +3,14 @@
 ---
 # Performance
 ## 컴퓨팅 성능을 평가하는 두 요소
-1. 응답시간*Response Time*
-	1. 어떠한 태스크가 시작되고 종료되기 까지의 시간
-		
+
+계산 성능을 평가하는 기준은 크게 두 가지로 나눌 수 있다.
+
+1. **응답시간**(Response Time) : 어떠한 작업이 시작되고 종료되기 까지의 시간.
+2. **처리량**(Throughput) : 하나의 단위 시간에 처리한 작업의 양.
 ![](https://i.imgur.com/PAV7hJf.png)
 
-2. 처리량*Throughput*
-	1. 하나의 단위 시간에 처리한 작업의 양이며, 주로 DB 서버의 성능을 평가하는데 사용됨
 ![](https://i.imgur.com/h2XRrKW.png)
-
-## 정의
 
 성능과 실행시간은 반비례 관계를 갖는다.
 **Performance = 1 / execution time (response time)**
